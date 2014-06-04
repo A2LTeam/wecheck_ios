@@ -21,6 +21,7 @@
 		39826B26193E144F00AB0CAE /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 39826B08193E144F00AB0CAE /* UIKit.framework */; };
 		39826B2E193E144F00AB0CAE /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 39826B2C193E144F00AB0CAE /* InfoPlist.strings */; };
 		39826B30193E144F00AB0CAE /* JSON_POCTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 39826B2F193E144F00AB0CAE /* JSON_POCTests.m */; };
+		39826B3B193E14F000AB0CAE /* ItemShopPrice.m in Sources */ = {isa = PBXBuildFile; fileRef = 39826B3A193E14F000AB0CAE /* ItemShopPrice.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -53,6 +54,8 @@
 		39826B2B193E144F00AB0CAE /* JSON_POCTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "JSON_POCTests-Info.plist"; sourceTree = "<group>"; };
 		39826B2D193E144F00AB0CAE /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		39826B2F193E144F00AB0CAE /* JSON_POCTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JSON_POCTests.m; sourceTree = "<group>"; };
+		39826B39193E14F000AB0CAE /* ItemShopPrice.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ItemShopPrice.h; sourceTree = "<group>"; };
+		39826B3A193E14F000AB0CAE /* ItemShopPrice.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ItemShopPrice.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -119,6 +122,8 @@
 				39826B1A193E144F00AB0CAE /* ViewController.m */,
 				39826B1C193E144F00AB0CAE /* Images.xcassets */,
 				39826B0B193E144F00AB0CAE /* Supporting Files */,
+				39826B39193E14F000AB0CAE /* ItemShopPrice.h */,
+				39826B3A193E14F000AB0CAE /* ItemShopPrice.m */,
 			);
 			path = JSON_POC;
 			sourceTree = "<group>";
@@ -251,6 +256,7 @@
 			files = (
 				39826B1B193E144F00AB0CAE /* ViewController.m in Sources */,
 				39826B15193E144F00AB0CAE /* AppDelegate.m in Sources */,
+				39826B3B193E14F000AB0CAE /* ItemShopPrice.m in Sources */,
 				39826B11193E144F00AB0CAE /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
