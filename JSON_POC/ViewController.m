@@ -19,8 +19,7 @@
 {
     [super viewDidLoad];
 	// Do any additional setup after loading the view, typically from a nib.
-    //NSString *key = @"ip";
-    //NSString *value = @"1.1.1.1";
+    
     //NSString *urlAsString = [NSString stringWithFormat:@"http://validate.jsontest.com/?json={%@:%@}", key, value];
     //NSString *urlAsString = [NSString stringWithFormat:@"http://ip.jsontest.com/"];
     
