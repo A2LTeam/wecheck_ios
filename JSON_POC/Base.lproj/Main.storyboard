@@ -93,10 +93,10 @@
             </objects>
             <point key="canvasLocation" x="112" y="-207"/>
         </scene>
-        <!--Table View Controller - Shops-->
+        <!--Shop List Table View Controller - Shops-->
         <scene sceneID="PPe-Up-UU3">
             <objects>
-                <viewController id="2Jc-aN-JYV" customClass="UITableViewController" sceneMemberID="viewController">
+                <viewController id="2Jc-aN-JYV" customClass="ShopListTableViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="F5X-xj-Ne5"/>
                         <viewControllerLayoutGuide type="bottom" id="kLv-0W-LVe"/>

@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		2470F2531942AD4900190A6E /* BarcodeScanViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2470F2521942AD4900190A6E /* BarcodeScanViewController.m */; };
+		2470F2561942AF6400190A6E /* ShopListTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2470F2551942AF6400190A6E /* ShopListTableViewController.m */; };
+		2470F2591942B04600190A6E /* Shop.m in Sources */ = {isa = PBXBuildFile; fileRef = 2470F2581942B04600190A6E /* Shop.m */; };
 		39826B05193E144F00AB0CAE /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 39826B04193E144F00AB0CAE /* Foundation.framework */; };
 		39826B07193E144F00AB0CAE /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 39826B06193E144F00AB0CAE /* CoreGraphics.framework */; };
 		39826B09193E144F00AB0CAE /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 39826B08193E144F00AB0CAE /* UIKit.framework */; };
@@ -38,6 +40,10 @@
 /* Begin PBXFileReference section */
 		2470F2511942AD4900190A6E /* BarcodeScanViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BarcodeScanViewController.h; sourceTree = "<group>"; };
 		2470F2521942AD4900190A6E /* BarcodeScanViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BarcodeScanViewController.m; sourceTree = "<group>"; };
+		2470F2541942AF6400190A6E /* ShopListTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ShopListTableViewController.h; sourceTree = "<group>"; };
+		2470F2551942AF6400190A6E /* ShopListTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ShopListTableViewController.m; sourceTree = "<group>"; };
+		2470F2571942B04600190A6E /* Shop.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Shop.h; sourceTree = "<group>"; };
+		2470F2581942B04600190A6E /* Shop.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Shop.m; sourceTree = "<group>"; };
 		39826B01193E144F00AB0CAE /* JSON_POC.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = JSON_POC.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		39826B04193E144F00AB0CAE /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		39826B06193E144F00AB0CAE /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -121,6 +127,8 @@
 				39826B13193E144F00AB0CAE /* AppDelegate.h */,
 				39826B14193E144F00AB0CAE /* AppDelegate.m */,
 				39826B16193E144F00AB0CAE /* Main.storyboard */,
+				2470F2541942AF6400190A6E /* ShopListTableViewController.h */,
+				2470F2551942AF6400190A6E /* ShopListTableViewController.m */,
 				2470F2511942AD4900190A6E /* BarcodeScanViewController.h */,
 				2470F2521942AD4900190A6E /* BarcodeScanViewController.m */,
 				39826B19193E144F00AB0CAE /* ViewController.h */,
@@ -129,6 +137,8 @@
 				39826B0B193E144F00AB0CAE /* Supporting Files */,
 				39826B39193E14F000AB0CAE /* ItemShopPrice.h */,
 				39826B3A193E14F000AB0CAE /* ItemShopPrice.m */,
+				2470F2571942B04600190A6E /* Shop.h */,
+				2470F2581942B04600190A6E /* Shop.m */,
 			);
 			path = JSON_POC;
 			sourceTree = "<group>";
@@ -259,7 +269,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2470F2591942B04600190A6E /* Shop.m in Sources */,
 				39826B1B193E144F00AB0CAE /* ViewController.m in Sources */,
+				2470F2561942AF6400190A6E /* ShopListTableViewController.m in Sources */,
 				2470F2531942AD4900190A6E /* BarcodeScanViewController.m in Sources */,
 				39826B15193E144F00AB0CAE /* AppDelegate.m in Sources */,
 				39826B3B193E14F000AB0CAE /* ItemShopPrice.m in Sources */,
