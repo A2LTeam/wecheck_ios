@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="5056" systemVersion="13D65" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="vXZ-lx-hvc">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="5056" systemVersion="13D65" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="CbH-1z-wTu">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="3733"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--View Controller - Hot Pick-->
         <scene sceneID="ufC-wZ-h7g">
             <objects>
                 <viewController id="vXZ-lx-hvc" customClass="ViewController" sceneMemberID="viewController">
@@ -17,9 +17,100 @@
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <color key="backgroundColor" red="0.20739526995259672" green="1" blue="0.22540235265126507" alpha="1" colorSpace="calibratedRGB"/>
                     </view>
+                    <tabBarItem key="tabBarItem" title="Hot Pick" id="OAn-WB-bYE"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="661" y="-1033"/>
+        </scene>
+        <!--Barcode Scan View Controller - Check Now!!-->
+        <scene sceneID="B86-w4-Mun">
+            <objects>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="kkY-Uk-ANf" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <viewController id="28M-d4-vDn" customClass="BarcodeScanViewController" sceneMemberID="viewController">
+                    <button key="view" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="QyV-jq-tog">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                        <state key="normal" title="SCAN">
+                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                        </state>
+                    </button>
+                    <tabBarItem key="tabBarItem" title="Check Now!!" id="Vk7-dO-zcO"/>
+                    <connections>
+                        <segue destination="cDZ-xN-ITo" kind="push" id="nJ1-Wj-e9B"/>
+                    </connections>
+                </viewController>
+            </objects>
+            <point key="canvasLocation" x="661" y="-275"/>
+        </scene>
+        <!--Table View Controller-->
+        <scene sceneID="HD3-ki-qiY">
+            <objects>
+                <tableViewController id="cDZ-xN-ITo" sceneMemberID="viewController">
+                    <tableView key="view" opaque="NO" clipsSubviews="YES" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="1" sectionHeaderHeight="22" sectionFooterHeight="22" id="DQv-e3-BGU">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <prototypes>
+                            <tableViewCell contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" rowHeight="1" id="hCN-4c-AYs">
+                                <rect key="frame" x="0.0" y="22" width="320" height="1"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="hCN-4c-AYs" id="A8k-BK-Olk">
+                                    <rect key="frame" x="0.0" y="0.0" width="320" height="0.0"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="cDZ-xN-ITo" id="pHB-rs-aR4"/>
+                            <outlet property="delegate" destination="cDZ-xN-ITo" id="iCt-sY-sYw"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" id="HFG-4c-pAI"/>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="S2g-qD-cLq" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1203" y="-275"/>
+        </scene>
+        <!--Tab Bar Controller-->
+        <scene sceneID="RJa-0j-Ybm">
+            <objects>
+                <tabBarController definesPresentationContext="YES" id="CbH-1z-wTu" sceneMemberID="viewController">
+                    <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
+                    <tabBar key="tabBar" contentMode="scaleToFill" id="7xd-2N-w9x">
+                        <rect key="frame" x="129" y="330" width="163" height="49"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="vXZ-lx-hvc" kind="relationship" relationship="viewControllers" id="38o-0H-N2h"/>
+                        <segue destination="28M-d4-vDn" kind="relationship" relationship="viewControllers" id="yM6-TS-DF2"/>
+                        <segue destination="2Jc-aN-JYV" kind="relationship" relationship="viewControllers" id="zwC-dq-WrH"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="O2W-t0-oLr" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="112" y="-207"/>
+        </scene>
+        <!--Table View Controller - Shops-->
+        <scene sceneID="PPe-Up-UU3">
+            <objects>
+                <viewController id="2Jc-aN-JYV" customClass="UITableViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="F5X-xj-Ne5"/>
+                        <viewControllerLayoutGuide type="bottom" id="kLv-0W-LVe"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="2Vf-th-zmv">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Shops" id="ngl-G8-5NC"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="1XC-L9-y7D" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="661" y="1169"/>
         </scene>
     </scenes>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">

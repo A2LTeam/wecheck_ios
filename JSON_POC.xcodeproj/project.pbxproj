@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2470F2531942AD4900190A6E /* BarcodeScanViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2470F2521942AD4900190A6E /* BarcodeScanViewController.m */; };
 		39826B05193E144F00AB0CAE /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 39826B04193E144F00AB0CAE /* Foundation.framework */; };
 		39826B07193E144F00AB0CAE /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 39826B06193E144F00AB0CAE /* CoreGraphics.framework */; };
 		39826B09193E144F00AB0CAE /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 39826B08193E144F00AB0CAE /* UIKit.framework */; };
@@ -35,6 +36,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		2470F2511942AD4900190A6E /* BarcodeScanViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BarcodeScanViewController.h; sourceTree = "<group>"; };
+		2470F2521942AD4900190A6E /* BarcodeScanViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BarcodeScanViewController.m; sourceTree = "<group>"; };
 		39826B01193E144F00AB0CAE /* JSON_POC.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = JSON_POC.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		39826B04193E144F00AB0CAE /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		39826B06193E144F00AB0CAE /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -118,6 +121,8 @@
 				39826B13193E144F00AB0CAE /* AppDelegate.h */,
 				39826B14193E144F00AB0CAE /* AppDelegate.m */,
 				39826B16193E144F00AB0CAE /* Main.storyboard */,
+				2470F2511942AD4900190A6E /* BarcodeScanViewController.h */,
+				2470F2521942AD4900190A6E /* BarcodeScanViewController.m */,
 				39826B19193E144F00AB0CAE /* ViewController.h */,
 				39826B1A193E144F00AB0CAE /* ViewController.m */,
 				39826B1C193E144F00AB0CAE /* Images.xcassets */,
@@ -255,6 +260,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				39826B1B193E144F00AB0CAE /* ViewController.m in Sources */,
+				2470F2531942AD4900190A6E /* BarcodeScanViewController.m in Sources */,
 				39826B15193E144F00AB0CAE /* AppDelegate.m in Sources */,
 				39826B3B193E14F000AB0CAE /* ItemShopPrice.m in Sources */,
 				39826B11193E144F00AB0CAE /* main.m in Sources */,
@@ -462,6 +468,7 @@
 				39826B35193E144F00AB0CAE /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		39826B36193E144F00AB0CAE /* Build configuration list for PBXNativeTarget "JSON_POCTests" */ = {
 			isa = XCConfigurationList;
@@ -470,6 +477,7 @@
 				39826B38193E144F00AB0CAE /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
