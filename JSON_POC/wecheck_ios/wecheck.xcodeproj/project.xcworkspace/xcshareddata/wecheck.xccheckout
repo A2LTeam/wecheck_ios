@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
+	<false/>
+	<key>IDESourceControlProjectIdentifier</key>
+	<string>D633E2B5-D132-4BE7-85EE-9784EF89A798</string>
+	<key>IDESourceControlProjectName</key>
+	<string>wecheck</string>
+	<key>IDESourceControlProjectOriginsDictionary</key>
+	<dict>
+		<key>AA1BCBEA-1DE0-4BA7-AEDE-31B52C46FEA5</key>
+		<string>https://github.com/A2LTeam/wecheck_ios.git/trunk</string>
+	</dict>
+	<key>IDESourceControlProjectPath</key>
+	<string>wecheck.xcodeproj/project.xcworkspace</string>
+	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
+	<dict>
+		<key>AA1BCBEA-1DE0-4BA7-AEDE-31B52C46FEA5</key>
+		<string>../..</string>
+	</dict>
+	<key>IDESourceControlProjectRepositoryRootDictionary</key>
+	<dict>
+		<key>AA1BCBEA-1DE0-4BA7-AEDE-31B52C46FEA5</key>
+		<string>https://github.com/A2LTeam/wecheck_ios.git</string>
+	</dict>
+	<key>IDESourceControlProjectURL</key>
+	<string>https://github.com/A2LTeam/wecheck_ios.git/trunk/wecheck.xcodeproj</string>
+	<key>IDESourceControlProjectVersion</key>
+	<integer>110</integer>
+	<key>IDESourceControlProjectWCCIdentifier</key>
+	<string>AA1BCBEA-1DE0-4BA7-AEDE-31B52C46FEA5</string>
+	<key>IDESourceControlProjectWCConfigurations</key>
+	<array>
+		<dict>
+			<key>IDESourceControlRepositoryBranchesRelativeLocationKey</key>
+			<string>branches</string>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.subversion</string>
+			<key>IDESourceControlRepositoryTrunkRelativeLocationKey</key>
+			<string>trunk/wecheck.xcodeproj</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>AA1BCBEA-1DE0-4BA7-AEDE-31B52C46FEA5</string>
+			<key>IDESourceControlWCCName</key>
+			<string>wecheck_ios</string>
+		</dict>
+	</array>
+</dict>
+</plist>
