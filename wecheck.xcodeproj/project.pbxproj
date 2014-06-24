@@ -24,6 +24,7 @@
 		3969D44519544A3A0088F8F2 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3969D42419544A3A0088F8F2 /* UIKit.framework */; };
 		3969D44D19544A3A0088F8F2 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 3969D44B19544A3A0088F8F2 /* InfoPlist.strings */; };
 		3969D44F19544A3A0088F8F2 /* wecheckTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 3969D44E19544A3A0088F8F2 /* wecheckTests.m */; };
+		397A755A1959CB60000614B7 /* WCHotItemViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 397A75591959CB60000614B7 /* WCHotItemViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -60,6 +61,8 @@
 		3969D44A19544A3A0088F8F2 /* wecheckTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "wecheckTests-Info.plist"; sourceTree = "<group>"; };
 		3969D44C19544A3A0088F8F2 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		3969D44E19544A3A0088F8F2 /* wecheckTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = wecheckTests.m; sourceTree = "<group>"; };
+		397A75581959CB60000614B7 /* WCHotItemViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WCHotItemViewController.h; sourceTree = "<group>"; };
+		397A75591959CB60000614B7 /* WCHotItemViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WCHotItemViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -121,6 +124,8 @@
 		3969D42619544A3A0088F8F2 /* wecheck */ = {
 			isa = PBXGroup;
 			children = (
+				397A75581959CB60000614B7 /* WCHotItemViewController.h */,
+				397A75591959CB60000614B7 /* WCHotItemViewController.m */,
 				24E4E641195883B400F7F476 /* WCFavoriteTableTableViewController.h */,
 				24E4E642195883B400F7F476 /* WCFavoriteTableTableViewController.m */,
 				3969D42F19544A3A0088F8F2 /* WCAppDelegate.h */,
@@ -265,6 +270,7 @@
 			files = (
 				24E4E643195883B400F7F476 /* WCFavoriteTableTableViewController.m in Sources */,
 				3969D43A19544A3A0088F8F2 /* WCViewController.m in Sources */,
+				397A755A1959CB60000614B7 /* WCHotItemViewController.m in Sources */,
 				3969D43119544A3A0088F8F2 /* WCAppDelegate.m in Sources */,
 				3969D42D19544A3A0088F8F2 /* main.m in Sources */,
 			);
