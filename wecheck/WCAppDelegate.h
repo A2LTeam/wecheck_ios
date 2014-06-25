@@ -7,9 +7,11 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "WCCoreDataHelper.h"
 
 @interface WCAppDelegate : UIResponder <UIApplicationDelegate>
 
 @property (strong, nonatomic) UIWindow *window;
+@property (nonatomic, strong, readonly) WCCoreDataHelper *coreDataHelper;
 
 @end

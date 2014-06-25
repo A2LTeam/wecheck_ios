@@ -8,7 +8,12 @@
 
 /* Begin PBXBuildFile section */
 		24E4E63D1958831300F7F476 /* libsqlite3.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 24E4E63C1958831300F7F476 /* libsqlite3.dylib */; };
-		24E4E643195883B400F7F476 /* WCFavoriteTableTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 24E4E642195883B400F7F476 /* WCFavoriteTableTableViewController.m */; };
+		24E4E643195883B400F7F476 /* WCFavoriteViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 24E4E642195883B400F7F476 /* WCFavoriteViewController.m */; };
+		24E4E64A195AF95900F7F476 /* WCHistoryItemTableView.m in Sources */ = {isa = PBXBuildFile; fileRef = 24E4E649195AF95900F7F476 /* WCHistoryItemTableView.m */; };
+		24E4E64B195AF95900F7F476 /* WCHistoryItemTableView.m in Sources */ = {isa = PBXBuildFile; fileRef = 24E4E649195AF95900F7F476 /* WCHistoryItemTableView.m */; };
+		24E4E64D195B0AD100F7F476 /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 24E4E64C195B0AD100F7F476 /* CoreData.framework */; };
+		24E4E651195B0B8200F7F476 /* WCCoreDataHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 24E4E650195B0B8200F7F476 /* WCCoreDataHelper.m */; };
+		24E4E652195B0B8200F7F476 /* WCCoreDataHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 24E4E650195B0B8200F7F476 /* WCCoreDataHelper.m */; };
 		3969D42119544A3A0088F8F2 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3969D42019544A3A0088F8F2 /* Foundation.framework */; };
 		3969D42319544A3A0088F8F2 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3969D42219544A3A0088F8F2 /* CoreGraphics.framework */; };
 		3969D42519544A3A0088F8F2 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3969D42419544A3A0088F8F2 /* UIKit.framework */; };
@@ -39,8 +44,13 @@
 
 /* Begin PBXFileReference section */
 		24E4E63C1958831300F7F476 /* libsqlite3.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libsqlite3.dylib; path = usr/lib/libsqlite3.dylib; sourceTree = SDKROOT; };
-		24E4E641195883B400F7F476 /* WCFavoriteTableTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WCFavoriteTableTableViewController.h; sourceTree = "<group>"; };
-		24E4E642195883B400F7F476 /* WCFavoriteTableTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WCFavoriteTableTableViewController.m; sourceTree = "<group>"; };
+		24E4E641195883B400F7F476 /* WCFavoriteViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WCFavoriteViewController.h; sourceTree = "<group>"; };
+		24E4E642195883B400F7F476 /* WCFavoriteViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WCFavoriteViewController.m; sourceTree = "<group>"; };
+		24E4E648195AF95900F7F476 /* WCHistoryItemTableView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = WCHistoryItemTableView.h; path = ../WCHistoryItemTableView.h; sourceTree = "<group>"; };
+		24E4E649195AF95900F7F476 /* WCHistoryItemTableView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = WCHistoryItemTableView.m; path = ../WCHistoryItemTableView.m; sourceTree = "<group>"; };
+		24E4E64C195B0AD100F7F476 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
+		24E4E64F195B0B8200F7F476 /* WCCoreDataHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WCCoreDataHelper.h; sourceTree = "<group>"; };
+		24E4E650195B0B8200F7F476 /* WCCoreDataHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WCCoreDataHelper.m; sourceTree = "<group>"; };
 		3969D41D19544A3A0088F8F2 /* wecheck.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = wecheck.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3969D42019544A3A0088F8F2 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		3969D42219544A3A0088F8F2 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -70,6 +80,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				24E4E64D195B0AD100F7F476 /* CoreData.framework in Frameworks */,
 				24E4E63D1958831300F7F476 /* libsqlite3.dylib in Frameworks */,
 				3969D42319544A3A0088F8F2 /* CoreGraphics.framework in Frameworks */,
 				3969D42519544A3A0088F8F2 /* UIKit.framework in Frameworks */,
@@ -90,6 +101,16 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		24E4E64E195B0B4E00F7F476 /* WCCoreDataClasses */ = {
+			isa = PBXGroup;
+			children = (
+				24E4E64F195B0B8200F7F476 /* WCCoreDataHelper.h */,
+				24E4E650195B0B8200F7F476 /* WCCoreDataHelper.m */,
+			);
+			name = WCCoreDataClasses;
+			path = ..;
+			sourceTree = "<group>";
+		};
 		3969D41419544A3A0088F8F2 = {
 			isa = PBXGroup;
 			children = (
@@ -112,6 +133,7 @@
 		3969D41F19544A3A0088F8F2 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				24E4E64C195B0AD100F7F476 /* CoreData.framework */,
 				24E4E63C1958831300F7F476 /* libsqlite3.dylib */,
 				3969D42019544A3A0088F8F2 /* Foundation.framework */,
 				3969D42219544A3A0088F8F2 /* CoreGraphics.framework */,
@@ -126,8 +148,10 @@
 			children = (
 				397A75581959CB60000614B7 /* WCHotItemViewController.h */,
 				397A75591959CB60000614B7 /* WCHotItemViewController.m */,
-				24E4E641195883B400F7F476 /* WCFavoriteTableTableViewController.h */,
-				24E4E642195883B400F7F476 /* WCFavoriteTableTableViewController.m */,
+				24E4E641195883B400F7F476 /* WCFavoriteViewController.h */,
+				24E4E642195883B400F7F476 /* WCFavoriteViewController.m */,
+				24E4E648195AF95900F7F476 /* WCHistoryItemTableView.h */,
+				24E4E649195AF95900F7F476 /* WCHistoryItemTableView.m */,
 				3969D42F19544A3A0088F8F2 /* WCAppDelegate.h */,
 				3969D43019544A3A0088F8F2 /* WCAppDelegate.m */,
 				3969D43219544A3A0088F8F2 /* Main_iPhone.storyboard */,
@@ -135,6 +159,7 @@
 				3969D43819544A3A0088F8F2 /* WCViewController.h */,
 				3969D43919544A3A0088F8F2 /* WCViewController.m */,
 				3969D43B19544A3A0088F8F2 /* Images.xcassets */,
+				24E4E64E195B0B4E00F7F476 /* WCCoreDataClasses */,
 				3969D42719544A3A0088F8F2 /* Supporting Files */,
 			);
 			path = wecheck;
@@ -268,8 +293,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				24E4E643195883B400F7F476 /* WCFavoriteTableTableViewController.m in Sources */,
+				24E4E643195883B400F7F476 /* WCFavoriteViewController.m in Sources */,
+				24E4E64A195AF95900F7F476 /* WCHistoryItemTableView.m in Sources */,
 				3969D43A19544A3A0088F8F2 /* WCViewController.m in Sources */,
+				24E4E651195B0B8200F7F476 /* WCCoreDataHelper.m in Sources */,
 				397A755A1959CB60000614B7 /* WCHotItemViewController.m in Sources */,
 				3969D43119544A3A0088F8F2 /* WCAppDelegate.m in Sources */,
 				3969D42D19544A3A0088F8F2 /* main.m in Sources */,
@@ -280,7 +307,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				24E4E652195B0B8200F7F476 /* WCCoreDataHelper.m in Sources */,
 				3969D44F19544A3A0088F8F2 /* wecheckTests.m in Sources */,
+				24E4E64B195AF95900F7F476 /* WCHistoryItemTableView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
