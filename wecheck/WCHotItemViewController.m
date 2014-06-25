@@ -8,6 +8,7 @@
 
 #import "WCHotItemViewController.h"
 #import "WCShopHotItemViewController.h"
+#import "WCAllHotItemViewController.h"
 
 @interface WCHotItemViewController () {
     
@@ -87,9 +88,25 @@
 
 -(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    NSLog(@"##########%@", indexPath);
-    WCShopHotItemViewController *shopHotItemView = [self.storyboard instantiateViewControllerWithIdentifier:@"ShopHotItem"];
-    [self.navigationController pushViewController:shopHotItemView animated:YES];
+    NSLog(@"cell index   ##########%ld", indexPath.row);
+    UIViewController *selectedView;
+    
+    NSLog(@"segment index##########%ld", (long)self.segmentedControl.selectedSegmentIndex);
+    
+    switch (self.segmentedControl.selectedSegmentIndex)
+    {
+        case 0:
+            selectedView = [self.storyboard instantiateViewControllerWithIdentifier:@"AllHotItem"];
+            break;
+        case 1:
+            selectedView = [self.storyboard instantiateViewControllerWithIdentifier:@"ShopHotItem"];
+            break;
+        default:
+            break;
+    }
+
+    selectedView.title = [shopTitles objectAtIndex:indexPath.row];
+    [self.navigationController pushViewController:selectedView animated:YES];
 }
 
 /*
