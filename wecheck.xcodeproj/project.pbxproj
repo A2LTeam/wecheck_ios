@@ -14,6 +14,7 @@
 		24E4E64D195B0AD100F7F476 /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 24E4E64C195B0AD100F7F476 /* CoreData.framework */; };
 		24E4E651195B0B8200F7F476 /* WCCoreDataHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 24E4E650195B0B8200F7F476 /* WCCoreDataHelper.m */; };
 		24E4E652195B0B8200F7F476 /* WCCoreDataHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 24E4E650195B0B8200F7F476 /* WCCoreDataHelper.m */; };
+		24E4E655195B127000F7F476 /* WC.DataModel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 24E4E653195B127000F7F476 /* WC.DataModel.xcdatamodeld */; };
 		3969D42119544A3A0088F8F2 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3969D42019544A3A0088F8F2 /* Foundation.framework */; };
 		3969D42319544A3A0088F8F2 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3969D42219544A3A0088F8F2 /* CoreGraphics.framework */; };
 		3969D42519544A3A0088F8F2 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3969D42419544A3A0088F8F2 /* UIKit.framework */; };
@@ -52,6 +53,7 @@
 		24E4E64C195B0AD100F7F476 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
 		24E4E64F195B0B8200F7F476 /* WCCoreDataHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WCCoreDataHelper.h; sourceTree = "<group>"; };
 		24E4E650195B0B8200F7F476 /* WCCoreDataHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WCCoreDataHelper.m; sourceTree = "<group>"; };
+		24E4E654195B127000F7F476 /* WC.DataModel.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = WC.DataModel.xcdatamodel; sourceTree = "<group>"; };
 		3969D41D19544A3A0088F8F2 /* wecheck.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = wecheck.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3969D42019544A3A0088F8F2 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		3969D42219544A3A0088F8F2 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -109,6 +111,7 @@
 			children = (
 				24E4E64F195B0B8200F7F476 /* WCCoreDataHelper.h */,
 				24E4E650195B0B8200F7F476 /* WCCoreDataHelper.m */,
+				24E4E653195B127000F7F476 /* WC.DataModel.xcdatamodeld */,
 			);
 			name = WCCoreDataClasses;
 			path = ..;
@@ -300,6 +303,7 @@
 			files = (
 				24E4E643195883B400F7F476 /* WCFavoriteViewController.m in Sources */,
 				24E4E64A195AF95900F7F476 /* WCHistoryItemTableView.m in Sources */,
+				24E4E655195B127000F7F476 /* WC.DataModel.xcdatamodeld in Sources */,
 				3969D43A19544A3A0088F8F2 /* WCViewController.m in Sources */,
 				24E4E651195B0B8200F7F476 /* WCCoreDataHelper.m in Sources */,
 				397A755A1959CB60000614B7 /* WCHotItemViewController.m in Sources */,
@@ -534,6 +538,20 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		24E4E653195B127000F7F476 /* WC.DataModel.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				24E4E654195B127000F7F476 /* WC.DataModel.xcdatamodel */,
+			);
+			currentVersion = 24E4E654195B127000F7F476 /* WC.DataModel.xcdatamodel */;
+			name = WC.DataModel.xcdatamodeld;
+			path = wecheck/WC.DataModel.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = 3969D41519544A3A0088F8F2 /* Project object */;
 }

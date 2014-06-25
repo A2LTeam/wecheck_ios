@@ -6,7 +6,9 @@
 //  Copyright (c) 2014 Adam Cheung. All rights reserved.
 //
 
+#import <CoreData/CoreData.h>
 #import "WCFavoriteViewController.h"
+#import "WCAppDelegate.h"
 
 @interface WCFavoriteViewController ()
 
@@ -78,6 +80,29 @@
     // Configure the cell...
     cell.textLabel.text = @"testing";
     return cell;
+}
+
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    UIAlertView *messageAlert = [[UIAlertView alloc]
+                                 initWithTitle:@"Row Selected" message:@"You've selected a row" delegate:nil cancelButtonTitle:@"OK" otherButtonTitles:nil];
+    
+    // Display Alert Message
+    [messageAlert show];
+    
+    WCAppDelegate *appDelegate = (WCAppDelegate*) [[UIApplication sharedApplication] delegate];
+    
+
+    NSManagedObject *newHistory;
+    newHistory = [NSEntityDescription
+                  insertNewObjectForEntityForName:@"WCUserHistory"
+                  inManagedObjectContext:appDelegate.coreDataHelper.context];
+    
+    
+    [newHistory setValue: [NSNumber numberWithInt:20] forKey:@"itemID"];
+    
+    [appDelegate.coreDataHelper saveContext];
+    
 }
 
 // to be moved to database service

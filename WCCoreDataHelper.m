@@ -81,7 +81,7 @@ NSString *storeFilename = @"wecheck.sqlite";
     _store = [_coordinator addPersistentStoreWithType:NSSQLiteStoreType
                                         configuration:nil
                                                   URL:[self storeURL]
-                                              options:nil error:&error];
+                                              options:@{NSSQLitePragmasOption: @{@"journal_mode": @"delete"}} error:&error];
     if (!_store) {NSLog(@"Failed to add store. Error: %@", error);abort();}
     else         {if (debug==1) {NSLog(@"Successfully added store: %@", _store);}}
 }
@@ -91,6 +91,14 @@ NSString *storeFilename = @"wecheck.sqlite";
         NSLog(@"Running %@ '%@'", self.class, NSStringFromSelector(_cmd));
     }
     [self loadStore];
+    
+    NSManagedObject *newHistory;
+    newHistory = [NSEntityDescription
+                  insertNewObjectForEntityForName:@"WCUserHistory"
+                  inManagedObjectContext:_context];
+    
+    [_context assignObject:newHistory toPersistentStore:_store];
+    
 }
 
 #pragma mark - SAVING
