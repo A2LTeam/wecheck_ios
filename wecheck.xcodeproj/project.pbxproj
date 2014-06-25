@@ -26,6 +26,7 @@
 		3969D44F19544A3A0088F8F2 /* wecheckTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 3969D44E19544A3A0088F8F2 /* wecheckTests.m */; };
 		397A755A1959CB60000614B7 /* WCHotItemViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 397A75591959CB60000614B7 /* WCHotItemViewController.m */; };
 		39EA6381195AF3B900A0C4A0 /* WCShopHotItemViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 39EA6380195AF3B900A0C4A0 /* WCShopHotItemViewController.m */; };
+		39EA6384195B132D00A0C4A0 /* WCAllHotItemViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 39EA6383195B132D00A0C4A0 /* WCAllHotItemViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -66,6 +67,8 @@
 		397A75591959CB60000614B7 /* WCHotItemViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WCHotItemViewController.m; sourceTree = "<group>"; };
 		39EA637F195AF3B900A0C4A0 /* WCShopHotItemViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WCShopHotItemViewController.h; sourceTree = "<group>"; };
 		39EA6380195AF3B900A0C4A0 /* WCShopHotItemViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WCShopHotItemViewController.m; sourceTree = "<group>"; };
+		39EA6382195B132D00A0C4A0 /* WCAllHotItemViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WCAllHotItemViewController.h; sourceTree = "<group>"; };
+		39EA6383195B132D00A0C4A0 /* WCAllHotItemViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WCAllHotItemViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -127,6 +130,8 @@
 		3969D42619544A3A0088F8F2 /* wecheck */ = {
 			isa = PBXGroup;
 			children = (
+				39EA6382195B132D00A0C4A0 /* WCAllHotItemViewController.h */,
+				39EA6383195B132D00A0C4A0 /* WCAllHotItemViewController.m */,
 				397A75581959CB60000614B7 /* WCHotItemViewController.h */,
 				397A75591959CB60000614B7 /* WCHotItemViewController.m */,
 				24E4E641195883B400F7F476 /* WCFavoriteTableTableViewController.h */,
@@ -276,6 +281,7 @@
 				24E4E643195883B400F7F476 /* WCFavoriteTableTableViewController.m in Sources */,
 				3969D43A19544A3A0088F8F2 /* WCViewController.m in Sources */,
 				397A755A1959CB60000614B7 /* WCHotItemViewController.m in Sources */,
+				39EA6384195B132D00A0C4A0 /* WCAllHotItemViewController.m in Sources */,
 				3969D43119544A3A0088F8F2 /* WCAppDelegate.m in Sources */,
 				3969D42D19544A3A0088F8F2 /* main.m in Sources */,
 				39EA6381195AF3B900A0C4A0 /* WCShopHotItemViewController.m in Sources */,
