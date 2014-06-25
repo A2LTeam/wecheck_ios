@@ -8,7 +8,7 @@
 
 #import <UIKit/UIKit.h>
 
-@interface WCHotItemViewController : UIViewController
+@interface WCHotItemViewController : UIViewController< UITableViewDelegate, UITableViewDataSource>
 
 @property (strong, nonatomic) IBOutlet UISegmentedControl *segmentedControl;
 @property (strong, nonatomic) IBOutlet UIView *allHottestItemView;
