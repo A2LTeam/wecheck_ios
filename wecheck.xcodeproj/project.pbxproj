@@ -25,6 +25,7 @@
 		3969D44D19544A3A0088F8F2 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 3969D44B19544A3A0088F8F2 /* InfoPlist.strings */; };
 		3969D44F19544A3A0088F8F2 /* wecheckTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 3969D44E19544A3A0088F8F2 /* wecheckTests.m */; };
 		397A755A1959CB60000614B7 /* WCHotItemViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 397A75591959CB60000614B7 /* WCHotItemViewController.m */; };
+		39EA6381195AF3B900A0C4A0 /* WCShopHotItemViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 39EA6380195AF3B900A0C4A0 /* WCShopHotItemViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -63,6 +64,8 @@
 		3969D44E19544A3A0088F8F2 /* wecheckTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = wecheckTests.m; sourceTree = "<group>"; };
 		397A75581959CB60000614B7 /* WCHotItemViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WCHotItemViewController.h; sourceTree = "<group>"; };
 		397A75591959CB60000614B7 /* WCHotItemViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WCHotItemViewController.m; sourceTree = "<group>"; };
+		39EA637F195AF3B900A0C4A0 /* WCShopHotItemViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WCShopHotItemViewController.h; sourceTree = "<group>"; };
+		39EA6380195AF3B900A0C4A0 /* WCShopHotItemViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WCShopHotItemViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -131,6 +134,8 @@
 				3969D42F19544A3A0088F8F2 /* WCAppDelegate.h */,
 				3969D43019544A3A0088F8F2 /* WCAppDelegate.m */,
 				3969D43219544A3A0088F8F2 /* Main_iPhone.storyboard */,
+				39EA637F195AF3B900A0C4A0 /* WCShopHotItemViewController.h */,
+				39EA6380195AF3B900A0C4A0 /* WCShopHotItemViewController.m */,
 				3969D43519544A3A0088F8F2 /* Main_iPad.storyboard */,
 				3969D43819544A3A0088F8F2 /* WCViewController.h */,
 				3969D43919544A3A0088F8F2 /* WCViewController.m */,
@@ -273,6 +278,7 @@
 				397A755A1959CB60000614B7 /* WCHotItemViewController.m in Sources */,
 				3969D43119544A3A0088F8F2 /* WCAppDelegate.m in Sources */,
 				3969D42D19544A3A0088F8F2 /* main.m in Sources */,
+				39EA6381195AF3B900A0C4A0 /* WCShopHotItemViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

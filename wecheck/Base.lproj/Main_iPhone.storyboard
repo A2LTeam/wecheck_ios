@@ -115,6 +115,20 @@
                                         <rect key="frame" x="0.0" y="54" width="320" height="400"/>
                                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <prototypes>
+                                            <tableViewCell contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="ShopTableCell" id="Flm-UP-a8G">
+                                                <rect key="frame" x="0.0" y="22" width="320" height="44"/>
+                                                <autoresizingMask key="autoresizingMask"/>
+                                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Flm-UP-a8G" id="hfL-Q5-4U2">
+                                                    <rect key="frame" x="0.0" y="0.0" width="320" height="43"/>
+                                                    <autoresizingMask key="autoresizingMask"/>
+                                                </tableViewCellContentView>
+                                            </tableViewCell>
+                                        </prototypes>
+                                        <connections>
+                                            <outlet property="dataSource" destination="JSr-OV-P0W" id="dh5-TA-eZ9"/>
+                                            <outlet property="delegate" destination="JSr-OV-P0W" id="8le-Bq-7ww"/>
+                                        </connections>
                                     </tableView>
                                 </subviews>
                                 <color key="backgroundColor" red="0.90196079015731812" green="0.90196079015731812" blue="0.90196079015731812" alpha="1" colorSpace="calibratedRGB"/>
@@ -148,10 +162,10 @@
             </objects>
             <point key="canvasLocation" x="2385" y="-423"/>
         </scene>
-        <!--View Controller-->
+        <!--Shop Hot Item View Controller - ShopHotItem-->
         <scene sceneID="yB5-tF-v36">
             <objects>
-                <viewController id="YDI-fc-aq8" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="ShopHotItem" title="ShopHotItem" id="YDI-fc-aq8" customClass="WCShopHotItemViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="fPE-NE-FEX"/>
                         <viewControllerLayoutGuide type="bottom" id="5Cv-sM-3qR"/>

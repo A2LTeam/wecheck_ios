@@ -7,8 +7,12 @@
 //
 
 #import "WCHotItemViewController.h"
+#import "WCShopHotItemViewController.h"
 
-@interface WCHotItemViewController ()
+@interface WCHotItemViewController () {
+    
+    NSArray *shopTitles;
+}
 
 @end
 
@@ -28,6 +32,12 @@
 {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
+    
+    shopTitles = [[NSArray alloc] initWithObjects:
+                  @"百佳",
+                  @"惠康",
+                  @"Market Place",
+                  nil];
 }
 
 - (void)didReceiveMemoryWarning
@@ -47,6 +57,55 @@
 }
 */
 
+#pragma mark - Table view data source
+
+- (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
+{
+    //#warning Potentially incomplete method implementation.
+    // Return the number of sections.
+    return 1;
+}
+
+- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
+{
+    //#warning Incomplete method implementation.
+    // Return the number of rows in the section.
+    return [shopTitles count];
+}
+
+
+- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    static NSString *CellIdentifier = @"ShopTableCell";
+    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier forIndexPath:indexPath];
+    cell.textLabel.text =[shopTitles objectAtIndex:indexPath.row];
+    // Configure the cell...
+    //cell.shopNameLabel.text = [shopTitles objectAtIndex:indexPath.row];
+    //cell.shopLogoImage.image = [UIImage imageNamed:[shopLogos objectAtIndex:indexPath.row]];
+    return cell;
+}
+
+-(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    NSLog(@"##########%@", indexPath);
+    WCShopHotItemViewController *shopHotItemView = [self.storyboard instantiateViewControllerWithIdentifier:@"ShopHotItem"];
+    [self.navigationController pushViewController:shopHotItemView animated:YES];
+}
+
+/*
+- (void) prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sende sr {
+    
+    NSLog(@"##########%@", [segue identifier]);
+    if ([[segue identifier] isEqualToString:@"ShowShopItem"]) {
+        
+        WCShopHotItemViewController *shopItemViewController = [segue destinationViewController];
+        NSIndexPath *indexPath = [self.shopHottestItemTableView indexPathForSelectedRow];
+        
+        shopItemViewController.title = [shopTitles objectAtIndex:indexPath.row];
+    }
+    
+}
+*/
 - (IBAction)segmentedValueChanged:(UISegmentedControl *)sender {
     switch (sender.selectedSegmentIndex) {
         case 0:
