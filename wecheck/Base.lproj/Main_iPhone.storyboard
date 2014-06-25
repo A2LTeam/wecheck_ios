@@ -4,10 +4,10 @@
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="3733"/>
     </dependencies>
     <scenes>
-        <!--View Controller - Favorite-->
+        <!--Favorite View Controller - Favorite-->
         <scene sceneID="rp3-My-Akt">
             <objects>
-                <viewController title="Favorite" id="uWq-YM-Zul" sceneMemberID="viewController">
+                <viewController title="Favorite" id="uWq-YM-Zul" customClass="WCFavoriteViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="Bda-b7-DP4"/>
                         <viewControllerLayoutGuide type="bottom" id="EIp-PP-FMl"/>
@@ -16,14 +16,32 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
-                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="BmC-gs-3o8">
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="BmC-gs-3o8" userLabel="HistoryView">
                                 <rect key="frame" x="0.0" y="65" width="320" height="453"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                <subviews>
+                                    <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="io0-Ao-c0m" userLabel="HistoryItemTableView" customClass="WCHistoryItemTableView">
+                                        <rect key="frame" x="0.0" y="0.0" width="320" height="453"/>
+                                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <connections>
+                                            <outlet property="dataSource" destination="uWq-YM-Zul" id="uS5-Td-6w0"/>
+                                            <outlet property="delegate" destination="uWq-YM-Zul" id="w5z-NG-jdl"/>
+                                        </connections>
+                                    </tableView>
+                                </subviews>
                                 <color key="backgroundColor" red="0.80000001190000003" green="0.80000001190000003" blue="0.80000001190000003" alpha="1" colorSpace="calibratedRGB"/>
                             </view>
-                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="R1e-mY-G8h">
-                                <rect key="frame" x="0.0" y="65" width="320" height="453"/>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="R1e-mY-G8h" userLabel="WatchListView">
+                                <rect key="frame" x="0.0" y="64" width="320" height="453"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                <subviews>
+                                    <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="0CH-ys-GLt" userLabel="WatchListItemTableView">
+                                        <rect key="frame" x="0.0" y="0.0" width="320" height="453"/>
+                                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                    </tableView>
+                                </subviews>
                                 <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                             </view>
                         </subviews>
@@ -38,8 +56,18 @@
                                 <segment title="History"/>
                                 <segment title="Watch List"/>
                             </segments>
+                            <connections>
+                                <action selector="segmentedValueChanged:" destination="uWq-YM-Zul" eventType="valueChanged" id="13L-BU-h2v"/>
+                            </connections>
                         </segmentedControl>
                     </navigationItem>
+                    <connections>
+                        <outlet property="historyItemTableView" destination="io0-Ao-c0m" id="l92-CB-A7t"/>
+                        <outlet property="historyView" destination="BmC-gs-3o8" id="roG-do-1hA"/>
+                        <outlet property="segmentedControl" destination="brG-E4-Lju" id="BLS-Rd-ncn"/>
+                        <outlet property="watchListItemTableView" destination="0CH-ys-GLt" id="cOc-BE-0bS"/>
+                        <outlet property="watchListView" destination="R1e-mY-G8h" id="4d0-PO-hd8"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Irj-sx-Vve" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

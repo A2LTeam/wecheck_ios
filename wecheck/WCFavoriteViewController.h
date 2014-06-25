@@ -9,8 +9,18 @@
 #import <UIKit/UIKit.h>
 #import <UIKit/UIKit.h>
 #import <sqlite3.h>
+#import "WCHistoryItemTableView.h"
 
-@interface WCFavoriteTableViewController : UITableViewController
+@interface WCFavoriteViewController : UIViewController
+
+@property (strong, nonatomic) IBOutlet UISegmentedControl *segmentedControl;
+@property (strong, nonatomic) IBOutlet UIView *historyView;
+@property (strong, nonatomic) IBOutlet UIView *watchListView;
+@property (strong, nonatomic) IBOutlet WCHistoryItemTableView *historyItemTableView;
+@property (strong, nonatomic) IBOutlet UITableView *watchListItemTableView;
+
+- (IBAction)segmentedValueChanged:(id)sender;
+
 @property (strong, nonatomic) IBOutlet UITextField *name;
 @property (strong, nonatomic) IBOutlet UITextField *address;
 @property (strong, nonatomic) IBOutlet UITextField *phone;
