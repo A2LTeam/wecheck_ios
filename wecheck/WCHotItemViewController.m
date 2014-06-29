@@ -13,6 +13,7 @@
 @interface WCHotItemViewController () {
     
     NSArray *shopTitles;
+    NSArray *itemTitles;
 }
 
 @end
@@ -38,6 +39,12 @@
                   @"百佳",
                   @"惠康",
                   @"Market Place",
+                  nil];
+    
+    itemTitles = [[NSArray alloc] initWithObjects:
+                  @"Item A",
+                  @"Item B",
+                  @"Item C",@"Item D",@"Item E",@"Item F",@"Item G",@"Item H",@"Item I",@"Item J",@"Item K",
                   nil];
 }
 
@@ -71,7 +78,18 @@
 {
     //#warning Incomplete method implementation.
     // Return the number of rows in the section.
-    return [shopTitles count];
+    switch (self.segmentedControl.selectedSegmentIndex)
+    {
+        case 0:
+            return [itemTitles count];
+            break;
+        case 1:
+            return [shopTitles count];
+            break;
+        default:
+            break;
+    }
+    return 0;
 }
 
 
@@ -79,10 +97,24 @@
 {
     static NSString *CellIdentifier = @"ShopTableCell";
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier forIndexPath:indexPath];
-    cell.textLabel.text =[shopTitles objectAtIndex:indexPath.row];
+
     // Configure the cell...
     //cell.shopNameLabel.text = [shopTitles objectAtIndex:indexPath.row];
     //cell.shopLogoImage.image = [UIImage imageNamed:[shopLogos objectAtIndex:indexPath.row]];
+    
+    switch (self.segmentedControl.selectedSegmentIndex)
+    {
+        case 0:
+            cell.textLabel.text =[itemTitles objectAtIndex:indexPath.row];
+            break;
+        case 1:
+            cell.textLabel.text =[shopTitles objectAtIndex:indexPath.row];
+            break;
+        default:
+            break;
+    }
+    
+    
     return cell;
 }
 
@@ -97,15 +129,17 @@
     {
         case 0:
             selectedView = [self.storyboard instantiateViewControllerWithIdentifier:@"AllHotItem"];
+            selectedView.title = [itemTitles objectAtIndex:indexPath.row];
             break;
         case 1:
             selectedView = [self.storyboard instantiateViewControllerWithIdentifier:@"ShopHotItem"];
+            selectedView.title = [shopTitles objectAtIndex:indexPath.row];
             break;
         default:
             break;
     }
 
-    selectedView.title = [shopTitles objectAtIndex:indexPath.row];
+ 
     [self.navigationController pushViewController:selectedView animated:YES];
 }
 
@@ -124,6 +158,10 @@
 }
 */
 - (IBAction)segmentedValueChanged:(UISegmentedControl *)sender {
+    
+    [self.shopHottestItemTableView reloadData];
+    
+    /*
     switch (sender.selectedSegmentIndex) {
         case 0:
             self.allHottestItemView.hidden = NO;
@@ -136,5 +174,6 @@
         default:
             break;
     }
+     */
 }
 @end
