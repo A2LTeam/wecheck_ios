@@ -19,7 +19,7 @@
 @end
 
 @implementation WCHotItemViewController
-@synthesize allHottestItemView, shopHottestItemView, allHottestItemTableView, shopHottestItemTableView;
+@synthesize shopHottestItemView, shopHottestItemTableView;
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -95,8 +95,7 @@
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    static NSString *CellIdentifier = @"ShopTableCell";
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier forIndexPath:indexPath];
+    UITableViewCell *cell;
 
     // Configure the cell...
     //cell.shopNameLabel.text = [shopTitles objectAtIndex:indexPath.row];
@@ -105,9 +104,11 @@
     switch (self.segmentedControl.selectedSegmentIndex)
     {
         case 0:
+            cell = [tableView dequeueReusableCellWithIdentifier:@"ItemTableCell" forIndexPath:indexPath];
             cell.textLabel.text =[itemTitles objectAtIndex:indexPath.row];
             break;
         case 1:
+            cell = [tableView dequeueReusableCellWithIdentifier:@"ShopTableCell" forIndexPath:indexPath];
             cell.textLabel.text =[shopTitles objectAtIndex:indexPath.row];
             break;
         default:
