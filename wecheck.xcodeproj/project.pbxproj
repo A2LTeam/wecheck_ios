@@ -38,6 +38,9 @@
 		39EE112F195FCFC700320C0D /* star@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 39EE112C195FCFC700320C0D /* star@2x.png */; };
 		39EE1132195FD17600320C0D /* cog_02@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 39EE1131195FD17600320C0D /* cog_02@2x.png */; };
 		39EE1136195FD68900320C0D /* barcode@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 39EE1135195FD68900320C0D /* barcode@2x.png */; };
+		39FFFD2A19600149008D1332 /* WCItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 39FFFD2919600149008D1332 /* WCItem.m */; };
+		39FFFD2D1960015F008D1332 /* WCShop.m in Sources */ = {isa = PBXBuildFile; fileRef = 39FFFD2C1960015F008D1332 /* WCShop.m */; };
+		39FFFD331960159F008D1332 /* WCItemTableCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 39FFFD321960159F008D1332 /* WCItemTableCell.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -91,6 +94,12 @@
 		39EE112C195FCFC700320C0D /* star@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "star@2x.png"; sourceTree = "<group>"; };
 		39EE1131195FD17600320C0D /* cog_02@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "cog_02@2x.png"; sourceTree = "<group>"; };
 		39EE1135195FD68900320C0D /* barcode@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "barcode@2x.png"; sourceTree = "<group>"; };
+		39FFFD2819600149008D1332 /* WCItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WCItem.h; sourceTree = "<group>"; };
+		39FFFD2919600149008D1332 /* WCItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WCItem.m; sourceTree = "<group>"; };
+		39FFFD2B1960015F008D1332 /* WCShop.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WCShop.h; sourceTree = "<group>"; };
+		39FFFD2C1960015F008D1332 /* WCShop.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WCShop.m; sourceTree = "<group>"; };
+		39FFFD311960159F008D1332 /* WCItemTableCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WCItemTableCell.h; sourceTree = "<group>"; };
+		39FFFD321960159F008D1332 /* WCItemTableCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WCItemTableCell.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -125,6 +134,10 @@
 				24E4E64F195B0B8200F7F476 /* WCCoreDataHelper.h */,
 				24E4E650195B0B8200F7F476 /* WCCoreDataHelper.m */,
 				24E4E653195B127000F7F476 /* WC.DataModel.xcdatamodeld */,
+				39FFFD2819600149008D1332 /* WCItem.h */,
+				39FFFD2919600149008D1332 /* WCItem.m */,
+				39FFFD2B1960015F008D1332 /* WCShop.h */,
+				39FFFD2C1960015F008D1332 /* WCShop.m */,
 			);
 			name = WCCoreDataClasses;
 			path = ..;
@@ -165,6 +178,7 @@
 		3969D42619544A3A0088F8F2 /* wecheck */ = {
 			isa = PBXGroup;
 			children = (
+				39FFFD301960156D008D1332 /* WCTableClasses */,
 				3969D42719544A3A0088F8F2 /* Supporting Files */,
 				39EA6382195B132D00A0C4A0 /* WCAllHotItemViewController.h */,
 				39EA6383195B132D00A0C4A0 /* WCAllHotItemViewController.m */,
@@ -228,6 +242,15 @@
 				39EE112C195FCFC700320C0D /* star@2x.png */,
 			);
 			name = Icons;
+			sourceTree = "<group>";
+		};
+		39FFFD301960156D008D1332 /* WCTableClasses */ = {
+			isa = PBXGroup;
+			children = (
+				39FFFD311960159F008D1332 /* WCItemTableCell.h */,
+				39FFFD321960159F008D1332 /* WCItemTableCell.m */,
+			);
+			name = WCTableClasses;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -341,8 +364,11 @@
 				24E4E651195B0B8200F7F476 /* WCCoreDataHelper.m in Sources */,
 				397A755A1959CB60000614B7 /* WCHotItemViewController.m in Sources */,
 				39EA6384195B132D00A0C4A0 /* WCAllHotItemViewController.m in Sources */,
+				39FFFD2D1960015F008D1332 /* WCShop.m in Sources */,
+				39FFFD331960159F008D1332 /* WCItemTableCell.m in Sources */,
 				3969D43119544A3A0088F8F2 /* WCAppDelegate.m in Sources */,
 				3969D42D19544A3A0088F8F2 /* main.m in Sources */,
+				39FFFD2A19600149008D1332 /* WCItem.m in Sources */,
 				39EA6381195AF3B900A0C4A0 /* WCShopHotItemViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

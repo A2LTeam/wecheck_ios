@@ -9,11 +9,16 @@
 #import "WCHotItemViewController.h"
 #import "WCShopHotItemViewController.h"
 #import "WCAllHotItemViewController.h"
+#import "WCItem.h"
+#import "WCItemTableCell.h"
 
 @interface WCHotItemViewController () {
     
     NSArray *shopTitles;
     NSArray *itemTitles;
+    
+    NSArray *_shops;
+    NSArray *_items;
 }
 
 @end
@@ -46,6 +51,12 @@
                   @"Item B",
                   @"Item C",@"Item D",@"Item E",@"Item F",@"Item G",@"Item H",@"Item I",@"Item J",@"Item K",
                   nil];
+    
+    _items = [[NSArray alloc] initWithObjects:
+              [[WCItem alloc] initWithItemId:[NSNumber numberWithInt:1] withItemNameEn:@"Item 1" withItemNameTc:@""],
+              [[WCItem alloc] initWithItemId:[NSNumber numberWithInt:1] withItemNameEn:@"Item 2" withItemNameTc:@""],
+              nil];
+    
 }
 
 - (void)didReceiveMemoryWarning
@@ -81,7 +92,7 @@
     switch (self.segmentedControl.selectedSegmentIndex)
     {
         case 0:
-            return [itemTitles count];
+            return [_items count];
             break;
         case 1:
             return [shopTitles count];
@@ -96,6 +107,10 @@
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
     UITableViewCell *cell;
+    
+    WCItemTableCell *itemCell;
+    
+    UITableViewCell *shopCell;
 
     // Configure the cell...
     //cell.shopNameLabel.text = [shopTitles objectAtIndex:indexPath.row];
@@ -104,12 +119,17 @@
     switch (self.segmentedControl.selectedSegmentIndex)
     {
         case 0:
-            cell = [tableView dequeueReusableCellWithIdentifier:@"ItemTableCell" forIndexPath:indexPath];
-            cell.textLabel.text =[itemTitles objectAtIndex:indexPath.row];
+            itemCell = [tableView dequeueReusableCellWithIdentifier:@"ItemTableCell" forIndexPath:indexPath];
+            //cell.textLabel.text =[itemTitles objectAtIndex:indexPath.row];
+            //itemCell = [[itemCell init] initWithItem:[_items objectAtIndex:indexPath.row]];
+            itemCell.itemNameLabel.text = [[_items objectAtIndex:indexPath.row] itemNameEn];
+            NSLog(@"##########%@", [[_items objectAtIndex:indexPath.row] itemNameEn]);
+            cell = itemCell;
             break;
         case 1:
-            cell = [tableView dequeueReusableCellWithIdentifier:@"ShopTableCell" forIndexPath:indexPath];
-            cell.textLabel.text =[shopTitles objectAtIndex:indexPath.row];
+            shopCell = [tableView dequeueReusableCellWithIdentifier:@"ShopTableCell" forIndexPath:indexPath];
+            shopCell.textLabel.text =[shopTitles objectAtIndex:indexPath.row];
+            cell = shopCell;
             break;
         default:
             break;
@@ -130,7 +150,7 @@
     {
         case 0:
             selectedView = [self.storyboard instantiateViewControllerWithIdentifier:@"AllHotItem"];
-            selectedView.title = [itemTitles objectAtIndex:indexPath.row];
+            selectedView.title = [[_items objectAtIndex:indexPath.row] itemNameEn];
             break;
         case 1:
             selectedView = [self.storyboard instantiateViewControllerWithIdentifier:@"ShopHotItem"];
