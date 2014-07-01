@@ -10,9 +10,9 @@
 
 @interface WCItem : NSObject;
  
-@property    NSNumber *itemId;
-@property    NSString  *itemNameEn;
-@property    NSString  *itemNameTc;
+@property (nonatomic, retain)   NSNumber    *_itemId;
+@property (nonatomic, retain)   NSString    *_itemNameEn;
+@property (nonatomic, retain)   NSString    *_itemNameTc;
 
 
 - (id)initWithItemId:(NSNumber*)itemId

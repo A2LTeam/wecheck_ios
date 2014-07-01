@@ -11,14 +11,19 @@
 #import "WCAllHotItemViewController.h"
 #import "WCItem.h"
 #import "WCItemTableCell.h"
+#import "WCQueryHotItemSvc.h"
+#import "WCQueryShopSvc.h"
 
 @interface WCHotItemViewController () {
     
-    NSArray *shopTitles;
-    NSArray *itemTitles;
-    
     NSArray *_shops;
+    //NSArray *itemTitles;
+    
+    //NSArray *_shops;
     NSArray *_items;
+    
+    WCQueryHotItemSvc *_queryHotItemSvc;
+    WCQueryShopSvc *_queryShopSvc;
 }
 
 @end
@@ -40,23 +45,17 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view.
     
-    shopTitles = [[NSArray alloc] initWithObjects:
-                  @"百佳",
-                  @"惠康",
-                  @"Market Place",
-                  nil];
+    // query shop
+    _queryShopSvc = [WCQueryShopSvc alloc];
+    // setup query parameters
+    WCQueryShopParam *shopParam = [WCQueryShopParam alloc];
+    _shops = [_queryShopSvc queryShop:shopParam];
     
-    itemTitles = [[NSArray alloc] initWithObjects:
-                  @"Item A",
-                  @"Item B",
-                  @"Item C",@"Item D",@"Item E",@"Item F",@"Item G",@"Item H",@"Item I",@"Item J",@"Item K",
-                  nil];
-    
-    _items = [[NSArray alloc] initWithObjects:
-              [[WCItem alloc] initWithItemId:[NSNumber numberWithInt:1] withItemNameEn:@"Item 1" withItemNameTc:@""],
-              [[WCItem alloc] initWithItemId:[NSNumber numberWithInt:1] withItemNameEn:@"Item 2" withItemNameTc:@""],
-              nil];
-    
+    // query hot item
+    _queryHotItemSvc = [WCQueryHotItemSvc alloc];
+    // setup query parameters
+    WCQueryHotItemParam *hotItemParam = [WCQueryHotItemParam alloc];
+    _items = [_queryHotItemSvc queryHotItem:hotItemParam];
 }
 
 - (void)didReceiveMemoryWarning
@@ -95,7 +94,7 @@
             return [_items count];
             break;
         case 1:
-            return [shopTitles count];
+            return [_shops count];
             break;
         default:
             break;
@@ -120,15 +119,13 @@
     {
         case 0:
             itemCell = [tableView dequeueReusableCellWithIdentifier:@"ItemTableCell" forIndexPath:indexPath];
-            //cell.textLabel.text =[itemTitles objectAtIndex:indexPath.row];
-            //itemCell = [[itemCell init] initWithItem:[_items objectAtIndex:indexPath.row]];
-            itemCell.itemNameLabel.text = [[_items objectAtIndex:indexPath.row] itemNameEn];
-            NSLog(@"##########%@", [[_items objectAtIndex:indexPath.row] itemNameEn]);
+            itemCell.itemNameLabel.text = [[_items objectAtIndex:indexPath.row] _itemNameEn];
+            NSLog(@"##########%@", [[_items objectAtIndex:indexPath.row] _itemNameEn]);
             cell = itemCell;
             break;
         case 1:
             shopCell = [tableView dequeueReusableCellWithIdentifier:@"ShopTableCell" forIndexPath:indexPath];
-            shopCell.textLabel.text =[shopTitles objectAtIndex:indexPath.row];
+            shopCell.textLabel.text =[_shops objectAtIndex:indexPath.row];
             cell = shopCell;
             break;
         default:
@@ -150,11 +147,11 @@
     {
         case 0:
             selectedView = [self.storyboard instantiateViewControllerWithIdentifier:@"AllHotItem"];
-            selectedView.title = [[_items objectAtIndex:indexPath.row] itemNameEn];
+            selectedView.title = [[_items objectAtIndex:indexPath.row] _itemNameEn];
             break;
         case 1:
             selectedView = [self.storyboard instantiateViewControllerWithIdentifier:@"ShopHotItem"];
-            selectedView.title = [shopTitles objectAtIndex:indexPath.row];
+            selectedView.title = [_shops objectAtIndex:indexPath.row];
             break;
         default:
             break;

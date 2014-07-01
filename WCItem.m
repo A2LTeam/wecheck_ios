@@ -9,16 +9,19 @@
 #import "WCItem.h"
 
 @implementation WCItem
-@synthesize itemId, itemNameEn, itemNameTc;
+
+//http://stackoverflow.com/questions/19784454/when-should-i-use-synthesize-explicitly
+
+@synthesize _itemId, _itemNameEn, _itemNameTc;
 
 - (id)initWithItemId:(NSNumber *)itemId
      withItemNameEn:(NSString *)itemNameEn
       withItemNameTc:(NSString *)itemNameTc {
     
     if (self = [self init]) {
-        self.itemId = itemId;
-        self.itemNameEn = itemNameEn;
-        self.itemNameTc = itemNameTc;
+        self._itemId = itemId;
+        self._itemNameEn = itemNameEn;
+        self._itemNameTc = itemNameTc;
     }
     
     return self;
