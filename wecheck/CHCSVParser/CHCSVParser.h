@@ -68,6 +68,7 @@ typedef NSInteger CHCSVErrorCode;
 
 - (id)initWithContentsOfCSVFile:(NSString *)csvFilePath;
 - (id)initWithContentsOfCSVFile:(NSString *)csvFilePath delimiter:(unichar)delimiter;
+- (id)initWithContentsOfCSVFile:(NSString *)csvFilePath usedEncoding:(NSStringEncoding)encoding delimiter:(unichar)delimiter;
 
 - (void)parse;
 - (void)cancelParsing;

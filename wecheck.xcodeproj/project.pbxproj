@@ -23,8 +23,8 @@
 		245FAFA11968026A0025B73F /* CHCSVParser.m in Sources */ = {isa = PBXBuildFile; fileRef = 245FAFA01968026A0025B73F /* CHCSVParser.m */; };
 		245FAFA21968026A0025B73F /* CHCSVParser.m in Sources */ = {isa = PBXBuildFile; fileRef = 245FAFA01968026A0025B73F /* CHCSVParser.m */; };
 		245FAFA4196807EA0025B73F /* subcategory.csv in Resources */ = {isa = PBXBuildFile; fileRef = 245FAFA3196807EA0025B73F /* subcategory.csv */; };
-		245FAFA7196811680025B73F /* WCSubCategory.m in Sources */ = {isa = PBXBuildFile; fileRef = 245FAFA6196811680025B73F /* WCSubCategory.m */; };
-		245FAFA8196811680025B73F /* WCSubCategory.m in Sources */ = {isa = PBXBuildFile; fileRef = 245FAFA6196811680025B73F /* WCSubCategory.m */; };
+		245FAFAB1968344A0025B73F /* WCSubCategory.m in Sources */ = {isa = PBXBuildFile; fileRef = 245FAFAA1968344A0025B73F /* WCSubCategory.m */; };
+		245FAFAC1968344A0025B73F /* WCSubCategory.m in Sources */ = {isa = PBXBuildFile; fileRef = 245FAFAA1968344A0025B73F /* WCSubCategory.m */; };
 		24E4E63D1958831300F7F476 /* libsqlite3.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 24E4E63C1958831300F7F476 /* libsqlite3.dylib */; };
 		24E4E643195883B400F7F476 /* WCFavoriteViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 24E4E642195883B400F7F476 /* WCFavoriteViewController.m */; };
 		24E4E64D195B0AD100F7F476 /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 24E4E64C195B0AD100F7F476 /* CoreData.framework */; };
@@ -77,8 +77,8 @@
 		245FAF9F1968026A0025B73F /* CHCSVParser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CHCSVParser.h; sourceTree = "<group>"; };
 		245FAFA01968026A0025B73F /* CHCSVParser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CHCSVParser.m; sourceTree = "<group>"; };
 		245FAFA3196807EA0025B73F /* subcategory.csv */ = {isa = PBXFileReference; lastKnownFileType = text; name = subcategory.csv; path = ../subcategory.csv; sourceTree = "<group>"; };
-		245FAFA5196811680025B73F /* WCSubCategory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = WCSubCategory.h; path = wecheck/WCCoreDataClasses/WCSubCategory.h; sourceTree = "<group>"; };
-		245FAFA6196811680025B73F /* WCSubCategory.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = WCSubCategory.m; path = wecheck/WCCoreDataClasses/WCSubCategory.m; sourceTree = "<group>"; };
+		245FAFA91968344A0025B73F /* WCSubCategory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = WCSubCategory.h; path = wecheck/WCCoreDataClasses/WCSubCategory.h; sourceTree = "<group>"; };
+		245FAFAA1968344A0025B73F /* WCSubCategory.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = WCSubCategory.m; path = wecheck/WCCoreDataClasses/WCSubCategory.m; sourceTree = "<group>"; };
 		24E4E63C1958831300F7F476 /* libsqlite3.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libsqlite3.dylib; path = usr/lib/libsqlite3.dylib; sourceTree = SDKROOT; };
 		24E4E641195883B400F7F476 /* WCFavoriteViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WCFavoriteViewController.h; sourceTree = "<group>"; };
 		24E4E642195883B400F7F476 /* WCFavoriteViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WCFavoriteViewController.m; sourceTree = "<group>"; };
@@ -167,9 +167,9 @@
 		24E4E64E195B0B4E00F7F476 /* WCCoreDataClasses */ = {
 			isa = PBXGroup;
 			children = (
-				245FAFA5196811680025B73F /* WCSubCategory.h */,
-				245FAFA6196811680025B73F /* WCSubCategory.m */,
 				245FAF7D1967CDD10025B73F /* WC.DataModel.xcdatamodeld */,
+				245FAFA91968344A0025B73F /* WCSubCategory.h */,
+				245FAFAA1968344A0025B73F /* WCSubCategory.m */,
 				245FAF7F1967CDD10025B73F /* WCCoreDataHelper.h */,
 				245FAF801967CDD10025B73F /* WCCoreDataHelper.m */,
 			);
@@ -435,7 +435,7 @@
 				245FAFA11968026A0025B73F /* CHCSVParser.m in Sources */,
 				245FAF9A1967FE500025B73F /* WCQueryShopParam.m in Sources */,
 				245FAF811967CDD10025B73F /* WC.DataModel.xcdatamodeld in Sources */,
-				245FAFA7196811680025B73F /* WCSubCategory.m in Sources */,
+				245FAFAB1968344A0025B73F /* WCSubCategory.m in Sources */,
 				3969D43119544A3A0088F8F2 /* WCAppDelegate.m in Sources */,
 				3969D42D19544A3A0088F8F2 /* main.m in Sources */,
 				39EC3C7C1967D5B0001EEC0A /* WCItem.m in Sources */,
@@ -454,7 +454,7 @@
 				245FAF821967CDD10025B73F /* WC.DataModel.xcdatamodeld in Sources */,
 				245FAF9D1967FE970025B73F /* WCHotItemViewController.m in Sources */,
 				3969D44F19544A3A0088F8F2 /* wecheckTests.m in Sources */,
-				245FAFA8196811680025B73F /* WCSubCategory.m in Sources */,
+				245FAFAC1968344A0025B73F /* WCSubCategory.m in Sources */,
 				245FAF901967D7CB0025B73F /* WCHistoryItemTableView.m in Sources */,
 				245FAF841967CDD10025B73F /* WCCoreDataHelper.m in Sources */,
 				245FAF881967CF140025B73F /* WCHistoryItemTableViewController.m in Sources */,

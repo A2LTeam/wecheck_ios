@@ -15,6 +15,7 @@
 
 #pragma mark - FILES
 NSString *storeFilename = @"wecheck.sqlite";
+NSNumberFormatter *_formatter;
 
 #pragma mark - PATHS
 - (NSString *)applicationDocumentsDirectory {
@@ -123,8 +124,9 @@ NSString *storeFilename = @"wecheck.sqlite";
     
     NSString *subCatFile = [[NSBundle mainBundle] pathForResource:@"subcategory" ofType:@"csv"];
     
-    CHCSVParser * p = [[CHCSVParser alloc] initWithContentsOfCSVFile:subCatFile delimiter:','];
+    CHCSVParser * p = [[CHCSVParser alloc] initWithContentsOfCSVFile:subCatFile usedEncoding:NSMacOSRomanStringEncoding delimiter:','];
     p.delegate = self;
+    p.sanitizesFields = YES;
     
     [p parse];
     
@@ -134,7 +136,8 @@ NSString *storeFilename = @"wecheck.sqlite";
 
 -(void) parserDidBeginDocument:(CHCSVParser *)parser
 {
-    _currentRow = [[NSMutableArray alloc] init];
+    //_currentRow = [[NSMutableArray alloc] init];
+    _formatter = [[NSNumberFormatter alloc] init];
 }
 
 -(void) parserDidEndDocument:(CHCSVParser *)parser
@@ -145,6 +148,7 @@ NSString *storeFilename = @"wecheck.sqlite";
         NSLog(@"%@          %@          %@",[[currentRow objectAtIndex:i] valueForKey:[NSString stringWithFormat:@"0"]],[[currentRow objectAtIndex:i] valueForKey:[NSString stringWithFormat:@"1"]],[[currentRow objectAtIndex:i] valueForKey:[NSString stringWithFormat:@"2"]]);
     }
      */
+    _formatter=nil;
 }
 
 - (void) parser:(CHCSVParser *)parser didFailWithError:(NSError *)error
@@ -154,19 +158,42 @@ NSString *storeFilename = @"wecheck.sqlite";
 
 -(void)parser:(CHCSVParser *)parser didBeginLine:(NSUInteger)recordNumber
 {
-    _subCategory=[[WCSubCategory alloc]init];
+    _subCategory= [NSEntityDescription insertNewObjectForEntityForName:@"WCSubCategory"
+                                                inManagedObjectContext:_context];
 }
 
 -(void)parser:(CHCSVParser *)parser didReadField:(NSString *)field atIndex:(NSInteger)fieldIndex
 {
 //    [_subCategory setObject:field forKey:[NSString stringWithFormat:@"%d",fieldIndex]];
     NSLog(@"Reading %@ %ld", field, (long)fieldIndex);
+    switch (fieldIndex) {
+        case 0:
+            _subCategory.id = [_formatter numberFromString:field];
+            break;
+        case 1:
+            _subCategory.categoryID = [_formatter numberFromString:field];
+            break;
+        case 2:
+            _subCategory.nameEN = field;
+            break;
+        case 3:
+            _subCategory.nameTC = field;
+            break;
+        case 4:
+            _subCategory.nameSC = field;
+            break;
+        default:
+            break;
+    }
 
 }
 
 - (void) parser:(CHCSVParser *)parser didEndLine:(NSUInteger)lineNumber
 {
-    [_currentRow addObject:_subCategory];
+    //[_currentRow addObject:_subCategory];
+    
+    [self saveContext];
+    
     _subCategory=nil;
 }
 

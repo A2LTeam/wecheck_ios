@@ -7,13 +7,15 @@
 //
 
 #import <Foundation/Foundation.h>
+#import <CoreData/CoreData.h>
 
-@interface WCSubCategory : NSObject
 
-@property (nonatomic, retain)   NSNumber    *_id;
-@property (nonatomic, retain)   NSNumber    *_categoryID;
-@property (nonatomic, retain)   NSString    *_nameEN;
-@property (nonatomic, retain)   NSString    *_nameTC;
-@property (nonatomic, retain)   NSString    *_nameSC;
+@interface WCSubCategory : NSManagedObject
+
+@property (nonatomic, retain) NSNumber * id;
+@property (nonatomic, retain) NSNumber * categoryID;
+@property (nonatomic, retain) NSString * nameEN;
+@property (nonatomic, retain) NSString * nameTC;
+@property (nonatomic, retain) NSString * nameSC;
 
 @end

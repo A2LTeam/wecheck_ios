@@ -100,6 +100,12 @@ NSString *const CHCSVErrorDomain = @"com.davedelong.csv";
     return [self initWithInputStream:stream usedEncoding:&encoding delimiter:delimiter];
 }
 
+- (id)initWithContentsOfCSVFile:(NSString *)csvFilePath usedEncoding:(NSStringEncoding)encoding delimiter:(unichar)delimiter
+{
+    NSInputStream *stream = [NSInputStream inputStreamWithFileAtPath:csvFilePath];
+    return [self initWithInputStream:stream usedEncoding:&encoding delimiter:delimiter];
+}
+
 - (id)initWithInputStream:(NSInputStream *)stream usedEncoding:(NSStringEncoding *)encoding delimiter:(unichar)delimiter {
     NSParameterAssert(stream);
     NSParameterAssert(delimiter);

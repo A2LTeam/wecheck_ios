@@ -8,8 +8,13 @@
 
 #import "WCSubCategory.h"
 
+
 @implementation WCSubCategory
 
-@synthesize _id, _categoryID, _nameEN, _nameTC, _nameSC;
+@dynamic id;
+@dynamic categoryID;
+@dynamic nameEN;
+@dynamic nameTC;
+@dynamic nameSC;
 
 @end

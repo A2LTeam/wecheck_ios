@@ -4,7 +4,7 @@
         <attribute name="id" optional="YES" attributeType="Integer 32" defaultValueString="0" syncable="YES"/>
         <attribute name="itemName" optional="YES" attributeType="String" syncable="YES"/>
     </entity>
-    <entity name="WCSubCategory" syncable="YES">
+    <entity name="WCSubCategory" representedClassName="WCSubCategory" syncable="YES">
         <attribute name="categoryID" optional="YES" attributeType="Integer 32" defaultValueString="0" syncable="YES"/>
         <attribute name="id" optional="YES" attributeType="Integer 32" defaultValueString="0" syncable="YES"/>
         <attribute name="nameEN" optional="YES" attributeType="String" syncable="YES"/>
@@ -17,8 +17,8 @@
         <relationship name="fkItem" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="WCItem" syncable="YES"/>
     </entity>
     <elements>
-        <element name="WCItem" positionX="-54" positionY="9" width="128" height="73"/>
-        <element name="WCUserHistory" positionX="-63" positionY="-18" width="128" height="88"/>
-        <element name="WCSubCategory" positionX="-54" positionY="9" width="128" height="118"/>
+        <element name="WCItem" positionX="-54" positionY="17" width="128" height="73"/>
+        <element name="WCUserHistory" positionX="-513" positionY="-27" width="128" height="88"/>
+        <element name="WCSubCategory" positionX="-306" positionY="242" width="128" height="118"/>
     </elements>
 </model>
