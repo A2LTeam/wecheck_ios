@@ -123,29 +123,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
-                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="v20-YC-ILP" userLabel="View-Top">
-                                <rect key="frame" x="0.0" y="65" width="320" height="454"/>
-                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                                <subviews>
-                                    <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="k5r-W5-tlK" userLabel="AllHottestItemTableView">
-                                        <rect key="frame" x="0.0" y="54" width="320" height="400"/>
-                                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                        <prototypes>
-                                            <tableViewCell contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="AllTableCell" id="WN6-OF-npq">
-                                                <rect key="frame" x="0.0" y="22" width="320" height="44"/>
-                                                <autoresizingMask key="autoresizingMask"/>
-                                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="WN6-OF-npq" id="UAb-KN-n0n">
-                                                    <rect key="frame" x="0.0" y="0.0" width="320" height="43"/>
-                                                    <autoresizingMask key="autoresizingMask"/>
-                                                </tableViewCellContentView>
-                                            </tableViewCell>
-                                        </prototypes>
-                                    </tableView>
-                                </subviews>
-                                <color key="backgroundColor" red="0.80000001192092896" green="0.40000000596046448" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                            </view>
-                            <view hidden="YES" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="DkB-ye-mYl" userLabel="View-Shop">
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="DkB-ye-mYl" userLabel="View-Shop">
                                 <rect key="frame" x="0.0" y="65" width="320" height="454"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                 <subviews>
@@ -154,13 +132,35 @@
                                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         <prototypes>
-                                            <tableViewCell contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="ShopTableCell" id="Flm-UP-a8G">
-                                                <rect key="frame" x="0.0" y="22" width="320" height="44"/>
+                                            <tableViewCell contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="ItemTableCell" id="Flm-UP-a8G" customClass="WCItemTableCell">
+                                                <rect key="frame" x="0.0" y="86" width="320" height="44"/>
                                                 <autoresizingMask key="autoresizingMask"/>
                                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Flm-UP-a8G" id="hfL-Q5-4U2">
                                                     <rect key="frame" x="0.0" y="0.0" width="320" height="43"/>
                                                     <autoresizingMask key="autoresizingMask"/>
+                                                    <subviews>
+                                                        <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="X9h-5R-Xwy" userLabel="ItemNameLabel">
+                                                            <rect key="frame" x="20" y="11" width="280" height="21"/>
+                                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                    </subviews>
                                                 </tableViewCellContentView>
+                                                <color key="backgroundColor" red="0.80000001190000003" green="1" blue="0.40000000600000002" alpha="1" colorSpace="calibratedRGB"/>
+                                                <connections>
+                                                    <outlet property="itemNameLabel" destination="X9h-5R-Xwy" id="N1f-DM-mzu"/>
+                                                </connections>
+                                            </tableViewCell>
+                                            <tableViewCell contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="ShopTableCell" id="8rR-kD-lV7">
+                                                <rect key="frame" x="0.0" y="130" width="320" height="44"/>
+                                                <autoresizingMask key="autoresizingMask"/>
+                                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="8rR-kD-lV7" id="giE-uk-dj5">
+                                                    <rect key="frame" x="0.0" y="0.0" width="320" height="43"/>
+                                                    <autoresizingMask key="autoresizingMask"/>
+                                                </tableViewCellContentView>
+                                                <color key="backgroundColor" red="0.80000001190000003" green="0.40000000600000002" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                             </tableViewCell>
                                         </prototypes>
                                         <connections>
@@ -189,8 +189,6 @@
                         </segmentedControl>
                     </navigationItem>
                     <connections>
-                        <outlet property="allHottestItemTableView" destination="k5r-W5-tlK" id="Zxd-bS-LzQ"/>
-                        <outlet property="allHottestItemView" destination="v20-YC-ILP" id="r2x-4F-XkI"/>
                         <outlet property="segmentedControl" destination="FIU-iV-4Sl" id="GL5-ui-wxK"/>
                         <outlet property="shopHottestItemTableView" destination="hwh-MP-Kkc" id="8pE-DJ-Tjw"/>
                         <outlet property="shopHottestItemView" destination="DkB-ye-mYl" id="MBx-mZ-23K"/>
@@ -257,7 +255,7 @@
         <scene sceneID="vr8-KU-WMy">
             <objects>
                 <navigationController title="Scan" automaticallyAdjustsScrollViewInsets="NO" id="W9k-Uz-bZT" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Scan" id="xcs-se-Qgk"/>
+                    <tabBarItem key="tabBarItem" title="Scan" image="barcode.png" id="xcs-se-Qgk"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="t9K-fq-UqD">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
@@ -297,7 +295,7 @@
         <scene sceneID="jdK-At-f3p">
             <objects>
                 <navigationController title="HotItem" automaticallyAdjustsScrollViewInsets="NO" id="ESH-Im-tC7" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Hot Item" id="xGn-Ik-F0j"/>
+                    <tabBarItem key="tabBarItem" title="Hot Item" image="fire_02.png" id="xGn-Ik-F0j"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="a7d-BI-a6l">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
@@ -316,7 +314,7 @@
         <scene sceneID="0KB-Hq-WyW">
             <objects>
                 <navigationController title="Favorite" automaticallyAdjustsScrollViewInsets="NO" id="Wcq-Ce-tqI" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Favorite" id="Tly-lD-yb8"/>
+                    <tabBarItem key="tabBarItem" title="Favorite" image="star.png" id="Tly-lD-yb8"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="Tl3-Jj-uNg">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
@@ -335,7 +333,7 @@
         <scene sceneID="F4t-i1-UdS">
             <objects>
                 <navigationController title="Search" automaticallyAdjustsScrollViewInsets="NO" id="OCM-CD-29V" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Search" id="cb6-B6-oSA"/>
+                    <tabBarItem key="tabBarItem" title="Search" image="magnifying_glass.png" id="cb6-B6-oSA"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="gvM-CG-gt4">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
@@ -351,6 +349,12 @@
             <point key="canvasLocation" x="1854" y="968"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="barcode.png" width="26" height="26"/>
+        <image name="fire_02.png" width="26" height="26"/>
+        <image name="magnifying_glass.png" width="26" height="26"/>
+        <image name="star.png" width="26" height="26"/>
+    </resources>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar"/>
         <simulatedOrientationMetrics key="orientation"/>

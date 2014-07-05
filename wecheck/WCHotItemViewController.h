@@ -11,9 +11,9 @@
 @interface WCHotItemViewController : UIViewController< UITableViewDelegate, UITableViewDataSource>
 
 @property (strong, nonatomic) IBOutlet UISegmentedControl *segmentedControl;
-@property (strong, nonatomic) IBOutlet UIView *allHottestItemView;
+//@property (strong, nonatomic) IBOutlet UIView *allHottestItemView;
 @property (strong, nonatomic) IBOutlet UIView *shopHottestItemView;
-@property (strong, nonatomic) IBOutlet UITableView *allHottestItemTableView;
+//@property (strong, nonatomic) IBOutlet UITableView *allHottestItemTableView;
 @property (strong, nonatomic) IBOutlet UITableView *shopHottestItemTableView;
 
 - (IBAction)segmentedValueChanged:(id)sender;

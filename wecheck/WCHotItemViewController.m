@@ -9,16 +9,27 @@
 #import "WCHotItemViewController.h"
 #import "WCShopHotItemViewController.h"
 #import "WCAllHotItemViewController.h"
+#import "WCItem.h"
+#import "WCItemTableCell.h"
+#import "WCQueryHotItemSvc.h"
+#import "WCQueryShopSvc.h"
 
 @interface WCHotItemViewController () {
     
-    NSArray *shopTitles;
+    NSArray *_shops;
+    //NSArray *itemTitles;
+    
+    //NSArray *_shops;
+    NSArray *_items;
+    
+    WCQueryHotItemSvc *_queryHotItemSvc;
+    WCQueryShopSvc *_queryShopSvc;
 }
 
 @end
 
 @implementation WCHotItemViewController
-@synthesize allHottestItemView, shopHottestItemView, allHottestItemTableView, shopHottestItemTableView;
+@synthesize shopHottestItemView, shopHottestItemTableView;
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -34,11 +45,17 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view.
     
-    shopTitles = [[NSArray alloc] initWithObjects:
-                  @"百佳",
-                  @"惠康",
-                  @"Market Place",
-                  nil];
+    // query shop
+    _queryShopSvc = [WCQueryShopSvc alloc];
+    // setup query parameters
+    WCQueryShopParam *shopParam = [WCQueryShopParam alloc];
+    _shops = [_queryShopSvc queryShop:shopParam];
+    
+    // query hot item
+    _queryHotItemSvc = [WCQueryHotItemSvc alloc];
+    // setup query parameters
+    WCQueryHotItemParam *hotItemParam = [WCQueryHotItemParam alloc];
+    _items = [_queryHotItemSvc queryHotItem:hotItemParam];
 }
 
 - (void)didReceiveMemoryWarning
@@ -71,18 +88,51 @@
 {
     //#warning Incomplete method implementation.
     // Return the number of rows in the section.
-    return [shopTitles count];
+    switch (self.segmentedControl.selectedSegmentIndex)
+    {
+        case 0:
+            return [_items count];
+            break;
+        case 1:
+            return [_shops count];
+            break;
+        default:
+            break;
+    }
+    return 0;
 }
 
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    static NSString *CellIdentifier = @"ShopTableCell";
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier forIndexPath:indexPath];
-    cell.textLabel.text =[shopTitles objectAtIndex:indexPath.row];
+    UITableViewCell *cell;
+    
+    WCItemTableCell *itemCell;
+    
+    UITableViewCell *shopCell;
+
     // Configure the cell...
     //cell.shopNameLabel.text = [shopTitles objectAtIndex:indexPath.row];
     //cell.shopLogoImage.image = [UIImage imageNamed:[shopLogos objectAtIndex:indexPath.row]];
+    
+    switch (self.segmentedControl.selectedSegmentIndex)
+    {
+        case 0:
+            itemCell = [tableView dequeueReusableCellWithIdentifier:@"ItemTableCell" forIndexPath:indexPath];
+            itemCell.itemNameLabel.text = [[_items objectAtIndex:indexPath.row] _itemNameEn];
+            NSLog(@"##########%@", [[_items objectAtIndex:indexPath.row] _itemNameEn]);
+            cell = itemCell;
+            break;
+        case 1:
+            shopCell = [tableView dequeueReusableCellWithIdentifier:@"ShopTableCell" forIndexPath:indexPath];
+            shopCell.textLabel.text =[_shops objectAtIndex:indexPath.row];
+            cell = shopCell;
+            break;
+        default:
+            break;
+    }
+    
+    
     return cell;
 }
 
@@ -97,15 +147,17 @@
     {
         case 0:
             selectedView = [self.storyboard instantiateViewControllerWithIdentifier:@"AllHotItem"];
+            selectedView.title = [[_items objectAtIndex:indexPath.row] _itemNameEn];
             break;
         case 1:
             selectedView = [self.storyboard instantiateViewControllerWithIdentifier:@"ShopHotItem"];
+            selectedView.title = [_shops objectAtIndex:indexPath.row];
             break;
         default:
             break;
     }
 
-    selectedView.title = [shopTitles objectAtIndex:indexPath.row];
+ 
     [self.navigationController pushViewController:selectedView animated:YES];
 }
 
@@ -124,6 +176,10 @@
 }
 */
 - (IBAction)segmentedValueChanged:(UISegmentedControl *)sender {
+    
+    [self.shopHottestItemTableView reloadData];
+    
+    /*
     switch (sender.selectedSegmentIndex) {
         case 0:
             self.allHottestItemView.hidden = NO;
@@ -136,5 +192,6 @@
         default:
             break;
     }
+     */
 }
 @end
