@@ -15,6 +15,11 @@
 		245FAF881967CF140025B73F /* WCHistoryItemTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 245FAF861967CF140025B73F /* WCHistoryItemTableViewController.m */; };
 		245FAF8F1967D7CB0025B73F /* WCHistoryItemTableView.m in Sources */ = {isa = PBXBuildFile; fileRef = 245FAF8E1967D7CB0025B73F /* WCHistoryItemTableView.m */; };
 		245FAF901967D7CB0025B73F /* WCHistoryItemTableView.m in Sources */ = {isa = PBXBuildFile; fileRef = 245FAF8E1967D7CB0025B73F /* WCHistoryItemTableView.m */; };
+		245FAF971967FE3F0025B73F /* WCQueryHotItemSvc.m in Sources */ = {isa = PBXBuildFile; fileRef = 39FEB0D219626848004A02A0 /* WCQueryHotItemSvc.m */; };
+		245FAF981967FE4B0025B73F /* WCQueryShopSvc.m in Sources */ = {isa = PBXBuildFile; fileRef = 39FEB0DC19626C81004A02A0 /* WCQueryShopSvc.m */; };
+		245FAF9A1967FE500025B73F /* WCQueryShopParam.m in Sources */ = {isa = PBXBuildFile; fileRef = 39FEB0D919626C6D004A02A0 /* WCQueryShopParam.m */; };
+		245FAF9C1967FE970025B73F /* WCHotItemViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 245FAF9B1967FE970025B73F /* WCHotItemViewController.m */; };
+		245FAF9D1967FE970025B73F /* WCHotItemViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 245FAF9B1967FE970025B73F /* WCHotItemViewController.m */; };
 		24E4E63D1958831300F7F476 /* libsqlite3.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 24E4E63C1958831300F7F476 /* libsqlite3.dylib */; };
 		24E4E643195883B400F7F476 /* WCFavoriteViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 24E4E642195883B400F7F476 /* WCFavoriteViewController.m */; };
 		24E4E64D195B0AD100F7F476 /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 24E4E64C195B0AD100F7F476 /* CoreData.framework */; };
@@ -33,7 +38,6 @@
 		3969D44519544A3A0088F8F2 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3969D42419544A3A0088F8F2 /* UIKit.framework */; };
 		3969D44D19544A3A0088F8F2 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 3969D44B19544A3A0088F8F2 /* InfoPlist.strings */; };
 		3969D44F19544A3A0088F8F2 /* wecheckTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 3969D44E19544A3A0088F8F2 /* wecheckTests.m */; };
-		397A755A1959CB60000614B7 /* WCHotItemViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 397A75591959CB60000614B7 /* WCHotItemViewController.m */; };
 		39EA6381195AF3B900A0C4A0 /* WCShopHotItemViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 39EA6380195AF3B900A0C4A0 /* WCShopHotItemViewController.m */; };
 		39EA6384195B132D00A0C4A0 /* WCAllHotItemViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 39EA6383195B132D00A0C4A0 /* WCAllHotItemViewController.m */; };
 		39EC3C7C1967D5B0001EEC0A /* WCItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 39EC3C791967D5B0001EEC0A /* WCItem.m */; };
@@ -44,7 +48,6 @@
 		39EE1132195FD17600320C0D /* cog_02@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 39EE1131195FD17600320C0D /* cog_02@2x.png */; };
 		39EE1136195FD68900320C0D /* barcode@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 39EE1135195FD68900320C0D /* barcode@2x.png */; };
 		39FEB0D61962687F004A02A0 /* WCQueryHotItemParam.m in Sources */ = {isa = PBXBuildFile; fileRef = 39FEB0D51962687F004A02A0 /* WCQueryHotItemParam.m */; };
-		39FFFD2A19600149008D1332 /* WCItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 39FFFD2919600149008D1332 /* WCItem.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -65,6 +68,7 @@
 		245FAF861967CF140025B73F /* WCHistoryItemTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WCHistoryItemTableViewController.m; sourceTree = "<group>"; };
 		245FAF8D1967D7CB0025B73F /* WCHistoryItemTableView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WCHistoryItemTableView.h; sourceTree = "<group>"; };
 		245FAF8E1967D7CB0025B73F /* WCHistoryItemTableView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WCHistoryItemTableView.m; sourceTree = "<group>"; };
+		245FAF9B1967FE970025B73F /* WCHotItemViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WCHotItemViewController.m; sourceTree = "<group>"; };
 		24E4E63C1958831300F7F476 /* libsqlite3.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libsqlite3.dylib; path = usr/lib/libsqlite3.dylib; sourceTree = SDKROOT; };
 		24E4E641195883B400F7F476 /* WCFavoriteViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WCFavoriteViewController.h; sourceTree = "<group>"; };
 		24E4E642195883B400F7F476 /* WCFavoriteViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WCFavoriteViewController.m; sourceTree = "<group>"; };
@@ -90,7 +94,6 @@
 		3969D44C19544A3A0088F8F2 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		3969D44E19544A3A0088F8F2 /* wecheckTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = wecheckTests.m; sourceTree = "<group>"; };
 		397A75581959CB60000614B7 /* WCHotItemViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WCHotItemViewController.h; sourceTree = "<group>"; };
-		397A75591959CB60000614B7 /* WCHotItemViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WCHotItemViewController.m; sourceTree = "<group>"; };
 		39EA637F195AF3B900A0C4A0 /* WCShopHotItemViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WCShopHotItemViewController.h; sourceTree = "<group>"; };
 		39EA6380195AF3B900A0C4A0 /* WCShopHotItemViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WCShopHotItemViewController.m; sourceTree = "<group>"; };
 		39EA6382195B132D00A0C4A0 /* WCAllHotItemViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WCAllHotItemViewController.h; sourceTree = "<group>"; };
@@ -112,7 +115,6 @@
 		39FEB0D919626C6D004A02A0 /* WCQueryShopParam.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WCQueryShopParam.m; sourceTree = "<group>"; };
 		39FEB0DB19626C81004A02A0 /* WCQueryShopSvc.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WCQueryShopSvc.h; sourceTree = "<group>"; };
 		39FEB0DC19626C81004A02A0 /* WCQueryShopSvc.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WCQueryShopSvc.m; sourceTree = "<group>"; };
-		39FFFD2919600149008D1332 /* WCItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WCItem.m; sourceTree = "<group>"; };
 		39FFFD311960159F008D1332 /* WCItemTableCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WCItemTableCell.h; sourceTree = "<group>"; };
 		39FFFD321960159F008D1332 /* WCItemTableCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WCItemTableCell.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -196,7 +198,7 @@
 				39EA6382195B132D00A0C4A0 /* WCAllHotItemViewController.h */,
 				39EA6383195B132D00A0C4A0 /* WCAllHotItemViewController.m */,
 				397A75581959CB60000614B7 /* WCHotItemViewController.h */,
-				397A75591959CB60000614B7 /* WCHotItemViewController.m */,
+				245FAF9B1967FE970025B73F /* WCHotItemViewController.m */,
 				24E4E641195883B400F7F476 /* WCFavoriteViewController.h */,
 				24E4E642195883B400F7F476 /* WCFavoriteViewController.m */,
 				3969D42F19544A3A0088F8F2 /* WCAppDelegate.h */,
@@ -400,18 +402,20 @@
 			files = (
 				24E4E643195883B400F7F476 /* WCFavoriteViewController.m in Sources */,
 				3969D43A19544A3A0088F8F2 /* WCViewController.m in Sources */,
-				397A755A1959CB60000614B7 /* WCHotItemViewController.m in Sources */,
+				245FAF971967FE3F0025B73F /* WCQueryHotItemSvc.m in Sources */,
 				39EC3C7D1967D5B0001EEC0A /* WCShop.m in Sources */,
 				245FAF871967CF140025B73F /* WCHistoryItemTableViewController.m in Sources */,
 				245FAF831967CDD10025B73F /* WCCoreDataHelper.m in Sources */,
 				39EA6384195B132D00A0C4A0 /* WCAllHotItemViewController.m in Sources */,
 				245FAF8F1967D7CB0025B73F /* WCHistoryItemTableView.m in Sources */,
+				245FAF9A1967FE500025B73F /* WCQueryShopParam.m in Sources */,
 				245FAF811967CDD10025B73F /* WC.DataModel.xcdatamodeld in Sources */,
 				3969D43119544A3A0088F8F2 /* WCAppDelegate.m in Sources */,
 				3969D42D19544A3A0088F8F2 /* main.m in Sources */,
-				39FFFD2A19600149008D1332 /* WCItem.m in Sources */,
 				39EC3C7C1967D5B0001EEC0A /* WCItem.m in Sources */,
+				245FAF981967FE4B0025B73F /* WCQueryShopSvc.m in Sources */,
 				39FEB0D61962687F004A02A0 /* WCQueryHotItemParam.m in Sources */,
+				245FAF9C1967FE970025B73F /* WCHotItemViewController.m in Sources */,
 				39EA6381195AF3B900A0C4A0 /* WCShopHotItemViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -421,6 +425,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				245FAF821967CDD10025B73F /* WC.DataModel.xcdatamodeld in Sources */,
+				245FAF9D1967FE970025B73F /* WCHotItemViewController.m in Sources */,
 				3969D44F19544A3A0088F8F2 /* wecheckTests.m in Sources */,
 				245FAF901967D7CB0025B73F /* WCHistoryItemTableView.m in Sources */,
 				245FAF841967CDD10025B73F /* WCCoreDataHelper.m in Sources */,
