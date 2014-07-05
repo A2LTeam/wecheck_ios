@@ -1,8 +1,40 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <model userDefinedModelVersionIdentifier="" type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="5064" systemVersion="13D65" minimumToolsVersion="Xcode 4.3" macOSVersion="Automatic" iOSVersion="Automatic">
-    <entity name="WCItem" syncable="YES">
+    <entity name="WCItem" representedClassName="WCItem" syncable="YES">
+        <attribute name="brandEN" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="brandSC" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="brandTC" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="id" optional="YES" attributeType="Integer 32" defaultValueString="0" syncable="YES"/>
-        <attribute name="itemName" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="itemCode" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="nameEN" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="nameSC" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="nameTC" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="orderIndex" optional="YES" attributeType="Integer 32" defaultValueString="0" syncable="YES"/>
+        <attribute name="subCategoryID" optional="YES" attributeType="Integer 32" defaultValueString="0" syncable="YES"/>
+        <relationship name="fkSubCategory" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="WCSubCategory" syncable="YES"/>
+    </entity>
+    <entity name="WCShop" representedClassName="WCShop" syncable="YES">
+        <attribute name="id" optional="YES" attributeType="Integer 32" defaultValueString="0" syncable="YES"/>
+        <attribute name="nameEN" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="nameSC" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="nameTC" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="orderIndex" optional="YES" attributeType="Integer 32" defaultValueString="0" syncable="YES"/>
+    </entity>
+    <entity name="WCShopBranch" representedClassName="WCShopBranch" syncable="YES">
+        <attribute name="address" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="id" optional="YES" attributeType="Integer 32" defaultValueString="0" syncable="YES"/>
+        <attribute name="phoneNo" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="shopID" optional="YES" attributeType="Integer 32" defaultValueString="0" syncable="YES"/>
+        <relationship name="fkShop" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="WCShop" syncable="YES"/>
+    </entity>
+    <entity name="WCShopItem" representedClassName="WCShopItem" syncable="YES">
+        <attribute name="id" optional="YES" attributeType="Integer 32" defaultValueString="0" syncable="YES"/>
+        <attribute name="itemID" optional="YES" attributeType="Integer 32" defaultValueString="0" syncable="YES"/>
+        <attribute name="lastPrice" optional="YES" attributeType="Decimal" defaultValueString="0.0" syncable="YES"/>
+        <attribute name="lastUpdDate" optional="YES" attributeType="Date" syncable="YES"/>
+        <attribute name="shopID" optional="YES" attributeType="Integer 32" defaultValueString="0" syncable="YES"/>
+        <relationship name="fkItem" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="WCItem" syncable="YES"/>
+        <relationship name="fkShop" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="WCShop" syncable="YES"/>
     </entity>
     <entity name="WCSubCategory" representedClassName="WCSubCategory" syncable="YES">
         <attribute name="categoryID" optional="YES" attributeType="Integer 32" defaultValueString="0" syncable="YES"/>
@@ -11,14 +43,17 @@
         <attribute name="nameSC" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="nameTC" optional="YES" attributeType="String" syncable="YES"/>
     </entity>
-    <entity name="WCUserHistory" syncable="YES">
+    <entity name="WCUserHistory" representedClassName="WCUserHistory" syncable="YES">
         <attribute name="accessDate" optional="YES" attributeType="Date" syncable="YES"/>
         <attribute name="itemID" optional="YES" attributeType="Integer 32" defaultValueString="0" syncable="YES"/>
         <relationship name="fkItem" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="WCItem" syncable="YES"/>
     </entity>
     <elements>
-        <element name="WCItem" positionX="-54" positionY="17" width="128" height="73"/>
-        <element name="WCUserHistory" positionX="-513" positionY="-27" width="128" height="88"/>
-        <element name="WCSubCategory" positionX="-306" positionY="242" width="128" height="118"/>
+        <element name="WCItem" positionX="-288" positionY="-189" width="128" height="208"/>
+        <element name="WCSubCategory" positionX="-11" positionY="-199" width="128" height="118"/>
+        <element name="WCUserHistory" positionX="-81" positionY="128" width="128" height="88"/>
+        <element name="WCShop" positionX="-578" positionY="-217" width="128" height="118"/>
+        <element name="WCShopBranch" positionX="-702" positionY="72" width="128" height="118"/>
+        <element name="WCShopItem" positionX="-477" positionY="117" width="128" height="148"/>
     </elements>
 </model>
