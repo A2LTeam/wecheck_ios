@@ -7,6 +7,7 @@
 //
 
 #import "WCItem.h"
+#import "WCShopItem.h"
 #import "WCSubCategory.h"
 
 
@@ -23,5 +24,6 @@
 @dynamic subCategoryID;
 @dynamic orderIndex;
 @dynamic fkSubCategory;
+@dynamic fkShopItems;
 
 @end

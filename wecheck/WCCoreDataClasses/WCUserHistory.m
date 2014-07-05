@@ -7,6 +7,7 @@
 //
 
 #import "WCUserHistory.h"
+#import "WCItem.h"
 
 
 @implementation WCUserHistory

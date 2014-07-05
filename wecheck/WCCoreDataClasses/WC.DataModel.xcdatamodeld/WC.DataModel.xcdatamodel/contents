@@ -11,6 +11,7 @@
         <attribute name="nameTC" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="orderIndex" optional="YES" attributeType="Integer 32" defaultValueString="0" syncable="YES"/>
         <attribute name="subCategoryID" optional="YES" attributeType="Integer 32" defaultValueString="0" syncable="YES"/>
+        <relationship name="fkShopItems" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="WCShopItem" inverseName="fkItem" inverseEntity="WCShopItem" syncable="YES"/>
         <relationship name="fkSubCategory" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="WCSubCategory" inverseName="fkItems" inverseEntity="WCSubCategory" syncable="YES"/>
     </entity>
     <entity name="WCShop" representedClassName="WCShop" syncable="YES">
@@ -19,13 +20,15 @@
         <attribute name="nameSC" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="nameTC" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="orderIndex" optional="YES" attributeType="Integer 32" defaultValueString="0" syncable="YES"/>
+        <relationship name="fkShopBranches" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="WCShopBranch" inverseName="fkShop" inverseEntity="WCShopBranch" syncable="YES"/>
+        <relationship name="fkShopItems" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="WCShopItem" inverseName="fkShop" inverseEntity="WCShopItem" syncable="YES"/>
     </entity>
     <entity name="WCShopBranch" representedClassName="WCShopBranch" syncable="YES">
         <attribute name="address" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="id" optional="YES" attributeType="Integer 32" defaultValueString="0" syncable="YES"/>
         <attribute name="phoneNo" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="shopID" optional="YES" attributeType="Integer 32" defaultValueString="0" syncable="YES"/>
-        <relationship name="fkShop" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="WCShop" syncable="YES"/>
+        <relationship name="fkShop" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="WCShop" inverseName="fkShopBranches" inverseEntity="WCShop" syncable="YES"/>
     </entity>
     <entity name="WCShopItem" representedClassName="WCShopItem" syncable="YES">
         <attribute name="id" optional="YES" attributeType="Integer 32" defaultValueString="0" syncable="YES"/>
@@ -33,8 +36,8 @@
         <attribute name="lastPrice" optional="YES" attributeType="Decimal" defaultValueString="0.0" syncable="YES"/>
         <attribute name="lastUpdDate" optional="YES" attributeType="Date" syncable="YES"/>
         <attribute name="shopID" optional="YES" attributeType="Integer 32" defaultValueString="0" syncable="YES"/>
-        <relationship name="fkItem" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="WCItem" syncable="YES"/>
-        <relationship name="fkShop" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="WCShop" syncable="YES"/>
+        <relationship name="fkItem" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="WCItem" inverseName="fkShopItems" inverseEntity="WCItem" syncable="YES"/>
+        <relationship name="fkShop" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="WCShop" inverseName="fkShopItems" inverseEntity="WCShop" syncable="YES"/>
     </entity>
     <entity name="WCSubCategory" representedClassName="WCSubCategory" syncable="YES">
         <attribute name="categoryID" optional="YES" attributeType="Integer 32" defaultValueString="0" syncable="YES"/>
@@ -50,10 +53,10 @@
         <relationship name="fkItem" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="WCItem" syncable="YES"/>
     </entity>
     <elements>
-        <element name="WCItem" positionX="-288" positionY="-189" width="128" height="208"/>
+        <element name="WCItem" positionX="-288" positionY="-189" width="128" height="223"/>
         <element name="WCSubCategory" positionX="-11" positionY="-199" width="128" height="133"/>
         <element name="WCUserHistory" positionX="-81" positionY="128" width="128" height="88"/>
-        <element name="WCShop" positionX="-578" positionY="-217" width="128" height="118"/>
+        <element name="WCShop" positionX="-578" positionY="-217" width="128" height="148"/>
         <element name="WCShopBranch" positionX="-702" positionY="72" width="128" height="118"/>
         <element name="WCShopItem" positionX="-477" positionY="117" width="128" height="148"/>
     </elements>

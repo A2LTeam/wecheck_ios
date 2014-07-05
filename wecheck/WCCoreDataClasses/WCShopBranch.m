@@ -7,6 +7,7 @@
 //
 
 #import "WCShopBranch.h"
+#import "WCShop.h"
 
 
 @implementation WCShopBranch

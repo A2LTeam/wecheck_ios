@@ -7,6 +7,8 @@
 //
 
 #import "WCShop.h"
+#import "WCShopBranch.h"
+#import "WCShopItem.h"
 
 
 @implementation WCShop
@@ -16,5 +18,7 @@
 @dynamic nameTC;
 @dynamic nameEN;
 @dynamic nameSC;
+@dynamic fkShopItems;
+@dynamic fkShopBranches;
 
 @end

@@ -9,6 +9,7 @@
 #import <Foundation/Foundation.h>
 #import <CoreData/CoreData.h>
 
+@class WCShop;
 
 @interface WCShopBranch : NSManagedObject
 
@@ -16,6 +17,6 @@
 @property (nonatomic, retain) NSNumber * shopID;
 @property (nonatomic, retain) NSString * address;
 @property (nonatomic, retain) NSString * phoneNo;
-@property (nonatomic, retain) NSManagedObject *fkShop;
+@property (nonatomic, retain) WCShop *fkShop;
 
 @end

@@ -9,7 +9,7 @@
 #import <Foundation/Foundation.h>
 #import <CoreData/CoreData.h>
 
-@class WCSubCategory;
+@class WCShopItem, WCSubCategory;
 
 @interface WCItem : NSManagedObject
 
@@ -24,5 +24,14 @@
 @property (nonatomic, retain) NSNumber * subCategoryID;
 @property (nonatomic, retain) NSNumber * orderIndex;
 @property (nonatomic, retain) WCSubCategory *fkSubCategory;
+@property (nonatomic, retain) NSSet *fkShopItems;
+@end
+
+@interface WCItem (CoreDataGeneratedAccessors)
+
+- (void)addFkShopItemsObject:(WCShopItem *)value;
+- (void)removeFkShopItemsObject:(WCShopItem *)value;
+- (void)addFkShopItems:(NSSet *)values;
+- (void)removeFkShopItems:(NSSet *)values;
 
 @end
