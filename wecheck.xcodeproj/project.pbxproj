@@ -13,6 +13,8 @@
 		245FAF841967CDD10025B73F /* WCCoreDataHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 245FAF801967CDD10025B73F /* WCCoreDataHelper.m */; };
 		245FAF871967CF140025B73F /* WCHistoryItemTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 245FAF861967CF140025B73F /* WCHistoryItemTableViewController.m */; };
 		245FAF881967CF140025B73F /* WCHistoryItemTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 245FAF861967CF140025B73F /* WCHistoryItemTableViewController.m */; };
+		245FAF8F1967D7CB0025B73F /* WCHistoryItemTableView.m in Sources */ = {isa = PBXBuildFile; fileRef = 245FAF8E1967D7CB0025B73F /* WCHistoryItemTableView.m */; };
+		245FAF901967D7CB0025B73F /* WCHistoryItemTableView.m in Sources */ = {isa = PBXBuildFile; fileRef = 245FAF8E1967D7CB0025B73F /* WCHistoryItemTableView.m */; };
 		24E4E63D1958831300F7F476 /* libsqlite3.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 24E4E63C1958831300F7F476 /* libsqlite3.dylib */; };
 		24E4E643195883B400F7F476 /* WCFavoriteViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 24E4E642195883B400F7F476 /* WCFavoriteViewController.m */; };
 		24E4E64D195B0AD100F7F476 /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 24E4E64C195B0AD100F7F476 /* CoreData.framework */; };
@@ -61,6 +63,8 @@
 		245FAF801967CDD10025B73F /* WCCoreDataHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = WCCoreDataHelper.m; path = wecheck/WCCoreDataClasses/WCCoreDataHelper.m; sourceTree = "<group>"; };
 		245FAF851967CF140025B73F /* WCHistoryItemTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WCHistoryItemTableViewController.h; sourceTree = "<group>"; };
 		245FAF861967CF140025B73F /* WCHistoryItemTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WCHistoryItemTableViewController.m; sourceTree = "<group>"; };
+		245FAF8D1967D7CB0025B73F /* WCHistoryItemTableView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WCHistoryItemTableView.h; sourceTree = "<group>"; };
+		245FAF8E1967D7CB0025B73F /* WCHistoryItemTableView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WCHistoryItemTableView.m; sourceTree = "<group>"; };
 		24E4E63C1958831300F7F476 /* libsqlite3.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libsqlite3.dylib; path = usr/lib/libsqlite3.dylib; sourceTree = SDKROOT; };
 		24E4E641195883B400F7F476 /* WCFavoriteViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WCFavoriteViewController.h; sourceTree = "<group>"; };
 		24E4E642195883B400F7F476 /* WCFavoriteViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WCFavoriteViewController.m; sourceTree = "<group>"; };
@@ -198,6 +202,8 @@
 				3969D42F19544A3A0088F8F2 /* WCAppDelegate.h */,
 				245FAF851967CF140025B73F /* WCHistoryItemTableViewController.h */,
 				245FAF861967CF140025B73F /* WCHistoryItemTableViewController.m */,
+				245FAF8D1967D7CB0025B73F /* WCHistoryItemTableView.h */,
+				245FAF8E1967D7CB0025B73F /* WCHistoryItemTableView.m */,
 				3969D43019544A3A0088F8F2 /* WCAppDelegate.m */,
 				3969D43219544A3A0088F8F2 /* Main_iPhone.storyboard */,
 				39EA637F195AF3B900A0C4A0 /* WCShopHotItemViewController.h */,
@@ -399,6 +405,7 @@
 				245FAF871967CF140025B73F /* WCHistoryItemTableViewController.m in Sources */,
 				245FAF831967CDD10025B73F /* WCCoreDataHelper.m in Sources */,
 				39EA6384195B132D00A0C4A0 /* WCAllHotItemViewController.m in Sources */,
+				245FAF8F1967D7CB0025B73F /* WCHistoryItemTableView.m in Sources */,
 				245FAF811967CDD10025B73F /* WC.DataModel.xcdatamodeld in Sources */,
 				3969D43119544A3A0088F8F2 /* WCAppDelegate.m in Sources */,
 				3969D42D19544A3A0088F8F2 /* main.m in Sources */,
@@ -415,6 +422,7 @@
 			files = (
 				245FAF821967CDD10025B73F /* WC.DataModel.xcdatamodeld in Sources */,
 				3969D44F19544A3A0088F8F2 /* wecheckTests.m in Sources */,
+				245FAF901967D7CB0025B73F /* WCHistoryItemTableView.m in Sources */,
 				245FAF841967CDD10025B73F /* WCCoreDataHelper.m in Sources */,
 				245FAF881967CF140025B73F /* WCHistoryItemTableViewController.m in Sources */,
 			);
