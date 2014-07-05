@@ -7,6 +7,7 @@
 //
 
 #import "WCCoreDataHelper.h"
+#import "CHCSVParser.h"
 
 @implementation WCCoreDataHelper
 
@@ -117,4 +118,56 @@ NSString *storeFilename = @"wecheck.sqlite";
         NSLog(@"SKIPPED _context save, there are no changes!");
     }
 }
+
+- (void)setupSystemData {
+    
+    NSString *subCatFile = [[NSBundle mainBundle] pathForResource:@"subcategory" ofType:@"csv"];
+    
+    CHCSVParser * p = [[CHCSVParser alloc] initWithContentsOfCSVFile:subCatFile delimiter:','];
+    p.delegate = self;
+    
+    [p parse];
+    
+}
+
+
+
+-(void) parserDidBeginDocument:(CHCSVParser *)parser
+{
+    _currentRow = [[NSMutableArray alloc] init];
+}
+
+-(void) parserDidEndDocument:(CHCSVParser *)parser
+{
+    /*
+    for(int i=0;i&lt;[currentRow count];i++)
+    {
+        NSLog(@"%@          %@          %@",[[currentRow objectAtIndex:i] valueForKey:[NSString stringWithFormat:@"0"]],[[currentRow objectAtIndex:i] valueForKey:[NSString stringWithFormat:@"1"]],[[currentRow objectAtIndex:i] valueForKey:[NSString stringWithFormat:@"2"]]);
+    }
+     */
+}
+
+- (void) parser:(CHCSVParser *)parser didFailWithError:(NSError *)error
+{
+    NSLog(@"Parser failed with error: %@ %@", [error localizedDescription], [error userInfo]);
+}
+
+-(void)parser:(CHCSVParser *)parser didBeginLine:(NSUInteger)recordNumber
+{
+    _subCategory=[[WCSubCategory alloc]init];
+}
+
+-(void)parser:(CHCSVParser *)parser didReadField:(NSString *)field atIndex:(NSInteger)fieldIndex
+{
+//    [_subCategory setObject:field forKey:[NSString stringWithFormat:@"%d",fieldIndex]];
+    NSLog(@"Reading %@ %ld", field, (long)fieldIndex);
+
+}
+
+- (void) parser:(CHCSVParser *)parser didEndLine:(NSUInteger)lineNumber
+{
+    [_currentRow addObject:_subCategory];
+    _subCategory=nil;
+}
+
 @end

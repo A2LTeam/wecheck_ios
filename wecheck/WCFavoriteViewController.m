@@ -92,7 +92,8 @@
     
     WCAppDelegate *appDelegate = (WCAppDelegate*) [[UIApplication sharedApplication] delegate];
     
-
+    [appDelegate.coreDataHelper setupSystemData];
+/*
     NSManagedObject *newHistory;
     newHistory = [NSEntityDescription
                   insertNewObjectForEntityForName:@"WCUserHistory"
@@ -102,7 +103,7 @@
     [newHistory setValue: [NSNumber numberWithInt:20] forKey:@"itemID"];
     
     [appDelegate.coreDataHelper saveContext];
-    
+*/
 }
 
 // to be moved to database service
