@@ -23,8 +23,6 @@
 		245FAFA11968026A0025B73F /* CHCSVParser.m in Sources */ = {isa = PBXBuildFile; fileRef = 245FAFA01968026A0025B73F /* CHCSVParser.m */; };
 		245FAFA21968026A0025B73F /* CHCSVParser.m in Sources */ = {isa = PBXBuildFile; fileRef = 245FAFA01968026A0025B73F /* CHCSVParser.m */; };
 		245FAFA4196807EA0025B73F /* subcategory.csv in Resources */ = {isa = PBXBuildFile; fileRef = 245FAFA3196807EA0025B73F /* subcategory.csv */; };
-		245FAFAB1968344A0025B73F /* WCSubCategory.m in Sources */ = {isa = PBXBuildFile; fileRef = 245FAFAA1968344A0025B73F /* WCSubCategory.m */; };
-		245FAFAC1968344A0025B73F /* WCSubCategory.m in Sources */ = {isa = PBXBuildFile; fileRef = 245FAFAA1968344A0025B73F /* WCSubCategory.m */; };
 		2467FE0419684BC80023EB05 /* WCUserHistory.m in Sources */ = {isa = PBXBuildFile; fileRef = 2467FE0319684BC80023EB05 /* WCUserHistory.m */; };
 		2467FE0519684BC80023EB05 /* WCUserHistory.m in Sources */ = {isa = PBXBuildFile; fileRef = 2467FE0319684BC80023EB05 /* WCUserHistory.m */; };
 		2467FE0819684BC90023EB05 /* WCShopBranch.m in Sources */ = {isa = PBXBuildFile; fileRef = 2467FE0719684BC90023EB05 /* WCShopBranch.m */; };
@@ -87,8 +85,6 @@
 		245FAF9F1968026A0025B73F /* CHCSVParser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CHCSVParser.h; sourceTree = "<group>"; };
 		245FAFA01968026A0025B73F /* CHCSVParser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CHCSVParser.m; sourceTree = "<group>"; };
 		245FAFA3196807EA0025B73F /* subcategory.csv */ = {isa = PBXFileReference; lastKnownFileType = text; name = subcategory.csv; path = ../subcategory.csv; sourceTree = "<group>"; };
-		245FAFA91968344A0025B73F /* WCSubCategory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = WCSubCategory.h; path = wecheck/WCCoreDataClasses/WCSubCategory.h; sourceTree = "<group>"; };
-		245FAFAA1968344A0025B73F /* WCSubCategory.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = WCSubCategory.m; path = wecheck/WCCoreDataClasses/WCSubCategory.m; sourceTree = "<group>"; };
 		2467FE0219684BC80023EB05 /* WCUserHistory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = WCUserHistory.h; path = wecheck/WCCoreDataClasses/WCUserHistory.h; sourceTree = "<group>"; };
 		2467FE0319684BC80023EB05 /* WCUserHistory.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = WCUserHistory.m; path = wecheck/WCCoreDataClasses/WCUserHistory.m; sourceTree = "<group>"; };
 		2467FE0619684BC90023EB05 /* WCShopBranch.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = WCShopBranch.h; path = wecheck/WCCoreDataClasses/WCShopBranch.h; sourceTree = "<group>"; };
@@ -198,8 +194,6 @@
 				2467FE0719684BC90023EB05 /* WCShopBranch.m */,
 				2467FE0219684BC80023EB05 /* WCUserHistory.h */,
 				2467FE0319684BC80023EB05 /* WCUserHistory.m */,
-				245FAFA91968344A0025B73F /* WCSubCategory.h */,
-				245FAFAA1968344A0025B73F /* WCSubCategory.m */,
 				245FAF7F1967CDD10025B73F /* WCCoreDataHelper.h */,
 				245FAF801967CDD10025B73F /* WCCoreDataHelper.m */,
 			);
@@ -469,7 +463,6 @@
 				245FAFA11968026A0025B73F /* CHCSVParser.m in Sources */,
 				245FAF9A1967FE500025B73F /* WCQueryShopParam.m in Sources */,
 				245FAF811967CDD10025B73F /* WC.DataModel.xcdatamodeld in Sources */,
-				245FAFAB1968344A0025B73F /* WCSubCategory.m in Sources */,
 				3969D43119544A3A0088F8F2 /* WCAppDelegate.m in Sources */,
 				2467FE0419684BC80023EB05 /* WCUserHistory.m in Sources */,
 				3969D42D19544A3A0088F8F2 /* main.m in Sources */,
@@ -492,7 +485,6 @@
 				245FAF9D1967FE970025B73F /* WCHotItemViewController.m in Sources */,
 				3969D44F19544A3A0088F8F2 /* wecheckTests.m in Sources */,
 				2467FE0919684BC90023EB05 /* WCShopBranch.m in Sources */,
-				245FAFAC1968344A0025B73F /* WCSubCategory.m in Sources */,
 				245FAF901967D7CB0025B73F /* WCHistoryItemTableView.m in Sources */,
 				245FAF841967CDD10025B73F /* WCCoreDataHelper.m in Sources */,
 				2467FE1519684BC90023EB05 /* WCShopItem.m in Sources */,
