@@ -26,9 +26,6 @@
 @property (strong, nonatomic) IBOutlet UITextField *phone;
 @property (strong, nonatomic) IBOutlet UILabel *status;
 
-- (IBAction)saveData:(id)sender;
-- (IBAction)findContact:(id)sender;
-
 @property (strong, nonatomic) NSString *databasePath;
 @property (nonatomic) sqlite3 *contactDB;
 @end
