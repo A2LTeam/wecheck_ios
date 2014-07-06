@@ -13,11 +13,12 @@
 
 @implementation WCItem
 
-@dynamic id;
-@dynamic nameEN;
+@synthesize id;
+@synthesize nameEN;
+@synthesize nameTC;
+
 @dynamic itemCode;
 @dynamic brandEN;
-@dynamic nameTC;
 @dynamic brandTC;
 @dynamic nameSC;
 @dynamic brandSC;
@@ -25,5 +26,19 @@
 @dynamic orderIndex;
 @dynamic fkSubCategory;
 @dynamic fkShopItems;
+
+
+- (id)initWithItemId:(NSNumber *)itemId
+      withItemNameEn:(NSString *)itemNameEn
+      withItemNameTc:(NSString *)itemNameTc {
+    
+    if (self = [self init]) {
+        self.id = itemId;
+        self.nameEN = itemNameEn;
+        self.nameTC = itemNameTc;
+    }
+    
+    return self;
+}
 
 @end

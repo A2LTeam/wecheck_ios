@@ -34,4 +34,9 @@
 - (void)addFkShopItems:(NSSet *)values;
 - (void)removeFkShopItems:(NSSet *)values;
 
+// testing
+- (id)initWithItemId:(NSNumber*)itemId
+      withItemNameEn:(NSString *)itemNameEn
+      withItemNameTc:(NSString *)itemNameTc;
+
 @end

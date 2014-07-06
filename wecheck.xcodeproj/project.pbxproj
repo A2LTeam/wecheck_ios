@@ -55,13 +55,13 @@
 		3969D44F19544A3A0088F8F2 /* wecheckTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 3969D44E19544A3A0088F8F2 /* wecheckTests.m */; };
 		39EA6381195AF3B900A0C4A0 /* WCShopHotItemViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 39EA6380195AF3B900A0C4A0 /* WCShopHotItemViewController.m */; };
 		39EA6384195B132D00A0C4A0 /* WCAllHotItemViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 39EA6383195B132D00A0C4A0 /* WCAllHotItemViewController.m */; };
-		39EC3C7C1967D5B0001EEC0A /* WCItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 39EC3C791967D5B0001EEC0A /* WCItem.m */; };
-		39EC3C7D1967D5B0001EEC0A /* WCShop.m in Sources */ = {isa = PBXBuildFile; fileRef = 39EC3C7B1967D5B0001EEC0A /* WCShop.m */; };
 		39EE112D195FCFC700320C0D /* fire_02@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 39EE112A195FCFC700320C0D /* fire_02@2x.png */; };
 		39EE112E195FCFC700320C0D /* magnifying_glass@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 39EE112B195FCFC700320C0D /* magnifying_glass@2x.png */; };
 		39EE112F195FCFC700320C0D /* star@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 39EE112C195FCFC700320C0D /* star@2x.png */; };
 		39EE1132195FD17600320C0D /* cog_02@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 39EE1131195FD17600320C0D /* cog_02@2x.png */; };
 		39EE1136195FD68900320C0D /* barcode@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 39EE1135195FD68900320C0D /* barcode@2x.png */; };
+		39F02F53196901D900E97A6E /* WCItemTableCell.h in Sources */ = {isa = PBXBuildFile; fileRef = 39FFFD311960159F008D1332 /* WCItemTableCell.h */; };
+		39F02F54196901D900E97A6E /* WCItemTableCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 39FFFD321960159F008D1332 /* WCItemTableCell.m */; };
 		39FEB0D61962687F004A02A0 /* WCQueryHotItemParam.m in Sources */ = {isa = PBXBuildFile; fileRef = 39FEB0D51962687F004A02A0 /* WCQueryHotItemParam.m */; };
 /* End PBXBuildFile section */
 
@@ -128,10 +128,6 @@
 		39EA6380195AF3B900A0C4A0 /* WCShopHotItemViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WCShopHotItemViewController.m; sourceTree = "<group>"; };
 		39EA6382195B132D00A0C4A0 /* WCAllHotItemViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WCAllHotItemViewController.h; sourceTree = "<group>"; };
 		39EA6383195B132D00A0C4A0 /* WCAllHotItemViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WCAllHotItemViewController.m; sourceTree = "<group>"; };
-		39EC3C781967D5B0001EEC0A /* WCItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = WCItem.h; path = ../WCItem.h; sourceTree = "<group>"; };
-		39EC3C791967D5B0001EEC0A /* WCItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = WCItem.m; path = ../WCItem.m; sourceTree = "<group>"; };
-		39EC3C7A1967D5B0001EEC0A /* WCShop.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = WCShop.h; path = ../WCShop.h; sourceTree = "<group>"; };
-		39EC3C7B1967D5B0001EEC0A /* WCShop.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = WCShop.m; path = ../WCShop.m; sourceTree = "<group>"; };
 		39EE112A195FCFC700320C0D /* fire_02@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "fire_02@2x.png"; sourceTree = "<group>"; };
 		39EE112B195FCFC700320C0D /* magnifying_glass@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "magnifying_glass@2x.png"; sourceTree = "<group>"; };
 		39EE112C195FCFC700320C0D /* star@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "star@2x.png"; sourceTree = "<group>"; };
@@ -264,10 +260,6 @@
 				3969D43519544A3A0088F8F2 /* Main_iPad.storyboard */,
 				3969D43819544A3A0088F8F2 /* WCViewController.h */,
 				3969D43919544A3A0088F8F2 /* WCViewController.m */,
-				39EC3C781967D5B0001EEC0A /* WCItem.h */,
-				39EC3C791967D5B0001EEC0A /* WCItem.m */,
-				39EC3C7A1967D5B0001EEC0A /* WCShop.h */,
-				39EC3C7B1967D5B0001EEC0A /* WCShop.m */,
 				3969D43B19544A3A0088F8F2 /* Images.xcassets */,
 				245FAF9E1968026A0025B73F /* CHCSVParser */,
 				24E4E64E195B0B4E00F7F476 /* WCCoreDataClasses */,
@@ -454,6 +446,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				39F02F53196901D900E97A6E /* WCItemTableCell.h in Sources */,
+				39F02F54196901D900E97A6E /* WCItemTableCell.m in Sources */,
 				24E4E643195883B400F7F476 /* WCFavoriteViewController.m in Sources */,
 				2467FE2819684FC50023EB05 /* WCShop.m in Sources */,
 				3969D43A19544A3A0088F8F2 /* WCViewController.m in Sources */,
@@ -461,7 +455,6 @@
 				2467FE1819684E1B0023EB05 /* WCSubCategory.m in Sources */,
 				2467FE2419684FC40023EB05 /* WCShopItem.m in Sources */,
 				2467FE1C19684FC40023EB05 /* WCItem.m in Sources */,
-				39EC3C7D1967D5B0001EEC0A /* WCShop.m in Sources */,
 				2467FE2019684FC40023EB05 /* WCShopBranch.m in Sources */,
 				245FAF871967CF140025B73F /* WCHistoryItemTableViewController.m in Sources */,
 				245FAF831967CDD10025B73F /* WCCoreDataHelper.m in Sources */,
@@ -472,7 +465,6 @@
 				245FAF811967CDD10025B73F /* WC.DataModel.xcdatamodeld in Sources */,
 				3969D43119544A3A0088F8F2 /* WCAppDelegate.m in Sources */,
 				3969D42D19544A3A0088F8F2 /* main.m in Sources */,
-				39EC3C7C1967D5B0001EEC0A /* WCItem.m in Sources */,
 				245FAF981967FE4B0025B73F /* WCQueryShopSvc.m in Sources */,
 				39FEB0D61962687F004A02A0 /* WCQueryHotItemParam.m in Sources */,
 				2467FE2C19684FC50023EB05 /* WCUserHistory.m in Sources */,

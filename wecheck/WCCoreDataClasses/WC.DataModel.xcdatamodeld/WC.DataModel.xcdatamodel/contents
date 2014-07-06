@@ -54,10 +54,10 @@
     </entity>
     <elements>
         <element name="WCItem" positionX="-288" positionY="-189" width="128" height="223"/>
-        <element name="WCSubCategory" positionX="-11" positionY="-199" width="128" height="133"/>
-        <element name="WCUserHistory" positionX="-81" positionY="128" width="128" height="88"/>
         <element name="WCShop" positionX="-578" positionY="-217" width="128" height="148"/>
         <element name="WCShopBranch" positionX="-702" positionY="72" width="128" height="118"/>
         <element name="WCShopItem" positionX="-477" positionY="117" width="128" height="148"/>
+        <element name="WCSubCategory" positionX="-11" positionY="-199" width="128" height="135"/>
+        <element name="WCUserHistory" positionX="-81" positionY="128" width="128" height="88"/>
     </elements>
 </model>

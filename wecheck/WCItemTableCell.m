@@ -11,7 +11,7 @@
 @implementation WCItemTableCell
 
 - (id)initWithItem:(WCItem*)wcItem {
-    self.itemNameLabel.text = [wcItem _itemNameEn];
+    self.itemNameLabel.text = [wcItem nameEN];
     return self;
 }
 

@@ -119,8 +119,8 @@
     {
         case 0:
             itemCell = [tableView dequeueReusableCellWithIdentifier:@"ItemTableCell" forIndexPath:indexPath];
-            itemCell.itemNameLabel.text = [[_items objectAtIndex:indexPath.row] _itemNameEn];
-            NSLog(@"##########%@", [[_items objectAtIndex:indexPath.row] _itemNameEn]);
+            itemCell.itemNameLabel.text = [[_items objectAtIndex:indexPath.row] nameEN];
+            NSLog(@"##########%@", [[_items objectAtIndex:indexPath.row] nameEN]);
             cell = itemCell;
             break;
         case 1:
@@ -147,7 +147,7 @@
     {
         case 0:
             selectedView = [self.storyboard instantiateViewControllerWithIdentifier:@"AllHotItem"];
-            selectedView.title = [[_items objectAtIndex:indexPath.row] _itemNameEn];
+            selectedView.title = [[_items objectAtIndex:indexPath.row] nameEN];
             break;
         case 1:
             selectedView = [self.storyboard instantiateViewControllerWithIdentifier:@"ShopHotItem"];
