@@ -13,7 +13,10 @@
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
     // Override point for customization after application launch.
-    [[self cdh] saveContext];
+    
+    //removing core data
+    //[[self cdh] saveContext];
+    [[self das] isDatabaseExist];
     return YES;
 }
 							
@@ -28,7 +31,8 @@
     // Use this method to release shared resources, save user data, invalidate timers, and store enough application state information to restore your application to its current state in case it is terminated later. 
     // If your application supports background execution, this method is called instead of applicationWillTerminate: when the user quits.
     
-    [[self cdh] saveContext];
+    //removing core data
+    //[[self cdh] saveContext];
 }
 
 - (void)applicationWillEnterForeground:(UIApplication *)application
@@ -45,11 +49,13 @@
 {
     // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
     
-    [[self cdh] saveContext];
+    //removing core data
+    //[[self cdh] saveContext];
 }
 
 #define debug 1
-
+/*
+ //removing core data
 - (WCCoreDataHelper*)cdh {
     if (debug==1) {
         NSLog(@"Running %@ '%@'", self.class, NSStringFromSelector(_cmd));
@@ -60,5 +66,17 @@
     }
     return _coreDataHelper;
 }
+*/
 
+- (WCDataAccessSvc*)das {
+    if (debug==1) {
+        NSLog(@"Running %@ '%@'", self.class, NSStringFromSelector(_cmd));
+    }
+    if (!_dataAccessSvc) {
+        _dataAccessSvc = [WCDataAccessSvc new];
+        [_dataAccessSvc isDatabaseExist];
+    }
+    return _dataAccessSvc;
+    
+}
 @end

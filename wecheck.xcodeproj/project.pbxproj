@@ -23,6 +23,10 @@
 		245FAFA11968026A0025B73F /* CHCSVParser.m in Sources */ = {isa = PBXBuildFile; fileRef = 245FAFA01968026A0025B73F /* CHCSVParser.m */; };
 		245FAFA21968026A0025B73F /* CHCSVParser.m in Sources */ = {isa = PBXBuildFile; fileRef = 245FAFA01968026A0025B73F /* CHCSVParser.m */; };
 		245FAFA4196807EA0025B73F /* subcategory.csv in Resources */ = {isa = PBXBuildFile; fileRef = 245FAFA3196807EA0025B73F /* subcategory.csv */; };
+		2466DAA41993CB190005A302 /* database in Resources */ = {isa = PBXBuildFile; fileRef = 2466DAA31993CB190005A302 /* database */; };
+		2466DAA51993CB190005A302 /* database in Resources */ = {isa = PBXBuildFile; fileRef = 2466DAA31993CB190005A302 /* database */; };
+		2466DAA91993CFA90005A302 /* WCDataAccessSvc.m in Sources */ = {isa = PBXBuildFile; fileRef = 2466DAA81993CFA90005A302 /* WCDataAccessSvc.m */; };
+		2466DAAA1993CFA90005A302 /* WCDataAccessSvc.m in Sources */ = {isa = PBXBuildFile; fileRef = 2466DAA81993CFA90005A302 /* WCDataAccessSvc.m */; };
 		2467FE1819684E1B0023EB05 /* WCSubCategory.m in Sources */ = {isa = PBXBuildFile; fileRef = 2467FE1719684E1B0023EB05 /* WCSubCategory.m */; };
 		2467FE1919684E1B0023EB05 /* WCSubCategory.m in Sources */ = {isa = PBXBuildFile; fileRef = 2467FE1719684E1B0023EB05 /* WCSubCategory.m */; };
 		2467FE1C19684FC40023EB05 /* WCItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 2467FE1B19684FC40023EB05 /* WCItem.m */; };
@@ -87,6 +91,9 @@
 		245FAF9F1968026A0025B73F /* CHCSVParser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CHCSVParser.h; sourceTree = "<group>"; };
 		245FAFA01968026A0025B73F /* CHCSVParser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CHCSVParser.m; sourceTree = "<group>"; };
 		245FAFA3196807EA0025B73F /* subcategory.csv */ = {isa = PBXFileReference; lastKnownFileType = text; name = subcategory.csv; path = ../subcategory.csv; sourceTree = "<group>"; };
+		2466DAA31993CB190005A302 /* database */ = {isa = PBXFileReference; lastKnownFileType = folder; name = database; path = wecheck/database; sourceTree = "<group>"; };
+		2466DAA71993CFA90005A302 /* WCDataAccessSvc.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WCDataAccessSvc.h; sourceTree = "<group>"; };
+		2466DAA81993CFA90005A302 /* WCDataAccessSvc.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WCDataAccessSvc.m; sourceTree = "<group>"; };
 		2467FE1619684E1B0023EB05 /* WCSubCategory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = WCSubCategory.h; path = wecheck/WCCoreDataClasses/WCSubCategory.h; sourceTree = "<group>"; };
 		2467FE1719684E1B0023EB05 /* WCSubCategory.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = WCSubCategory.m; path = wecheck/WCCoreDataClasses/WCSubCategory.m; sourceTree = "<group>"; };
 		2467FE1A19684FC40023EB05 /* WCItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = WCItem.h; path = wecheck/WCCoreDataClasses/WCItem.h; sourceTree = "<group>"; };
@@ -180,6 +187,15 @@
 			path = CHCSVParser;
 			sourceTree = "<group>";
 		};
+		2466DAA61993CEE30005A302 /* SqliteSvc */ = {
+			isa = PBXGroup;
+			children = (
+				2466DAA71993CFA90005A302 /* WCDataAccessSvc.h */,
+				2466DAA81993CFA90005A302 /* WCDataAccessSvc.m */,
+			);
+			name = SqliteSvc;
+			sourceTree = "<group>";
+		};
 		24E4E64E195B0B4E00F7F476 /* WCCoreDataClasses */ = {
 			isa = PBXGroup;
 			children = (
@@ -206,6 +222,7 @@
 		3969D41419544A3A0088F8F2 = {
 			isa = PBXGroup;
 			children = (
+				2466DAA31993CB190005A302 /* database */,
 				3969D42619544A3A0088F8F2 /* wecheck */,
 				3969D44819544A3A0088F8F2 /* wecheckTests */,
 				3969D41F19544A3A0088F8F2 /* Frameworks */,
@@ -238,6 +255,7 @@
 		3969D42619544A3A0088F8F2 /* wecheck */ = {
 			isa = PBXGroup;
 			children = (
+				2466DAA61993CEE30005A302 /* SqliteSvc */,
 				39FEB0D719626C4B004A02A0 /* WCQueryShopSvc */,
 				39FEB0D019626800004A02A0 /* WCQueryHotItemSvc */,
 				39FFFD301960156D008D1332 /* WCTableClasses */,
@@ -423,6 +441,7 @@
 				39EE1136195FD68900320C0D /* barcode@2x.png in Resources */,
 				3969D43719544A3A0088F8F2 /* Main_iPad.storyboard in Resources */,
 				39EE112F195FCFC700320C0D /* star@2x.png in Resources */,
+				2466DAA41993CB190005A302 /* database in Resources */,
 				39EE112D195FCFC700320C0D /* fire_02@2x.png in Resources */,
 				39EE1132195FD17600320C0D /* cog_02@2x.png in Resources */,
 				3969D43C19544A3A0088F8F2 /* Images.xcassets in Resources */,
@@ -436,6 +455,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				3969D44D19544A3A0088F8F2 /* InfoPlist.strings in Resources */,
+				2466DAA51993CB190005A302 /* database in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -466,6 +486,7 @@
 				3969D43119544A3A0088F8F2 /* WCAppDelegate.m in Sources */,
 				3969D42D19544A3A0088F8F2 /* main.m in Sources */,
 				245FAF981967FE4B0025B73F /* WCQueryShopSvc.m in Sources */,
+				2466DAA91993CFA90005A302 /* WCDataAccessSvc.m in Sources */,
 				39FEB0D61962687F004A02A0 /* WCQueryHotItemParam.m in Sources */,
 				2467FE2C19684FC50023EB05 /* WCUserHistory.m in Sources */,
 				245FAF9C1967FE970025B73F /* WCHotItemViewController.m in Sources */,
@@ -479,6 +500,7 @@
 			files = (
 				245FAFA21968026A0025B73F /* CHCSVParser.m in Sources */,
 				245FAF821967CDD10025B73F /* WC.DataModel.xcdatamodeld in Sources */,
+				2466DAAA1993CFA90005A302 /* WCDataAccessSvc.m in Sources */,
 				245FAF9D1967FE970025B73F /* WCHotItemViewController.m in Sources */,
 				2467FE1D19684FC40023EB05 /* WCItem.m in Sources */,
 				2467FE2519684FC40023EB05 /* WCShopItem.m in Sources */,

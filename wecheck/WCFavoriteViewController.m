@@ -92,7 +92,7 @@
     
     WCAppDelegate *appDelegate = (WCAppDelegate*) [[UIApplication sharedApplication] delegate];
     
-    [appDelegate.coreDataHelper setupSystemData];
+    //[appDelegate.coreDataHelper setupSystemData];
 /*
     NSManagedObject *newHistory;
     newHistory = [NSEntityDescription

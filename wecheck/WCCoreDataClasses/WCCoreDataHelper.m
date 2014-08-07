@@ -53,8 +53,13 @@ NSNumberFormatter *_formatter;
     if (debug==1) {
         NSLog(@"Running %@ '%@'", self.class, NSStringFromSelector(_cmd));
     }
-    return [[self applicationStoresDirectory]
+    
+    return [[NSBundle mainBundle] URLForResource:@"wecheck" withExtension:@"sqlite" subdirectory:@"database"];
+    /*
+     //comment as to assume the db is preloaded and no need to be created again
+     return [[self applicationStoresDirectory]
             URLByAppendingPathComponent:storeFilename];
+     */
 }
 
 #pragma mark - SETUP
@@ -94,12 +99,14 @@ NSNumberFormatter *_formatter;
     }
     [self loadStore];
     
+    /*
     NSManagedObject *newHistory;
     newHistory = [NSEntityDescription
                   insertNewObjectForEntityForName:@"WCUserHistory"
                   inManagedObjectContext:_context];
     
     [_context assignObject:newHistory toPersistentStore:_store];
+     */
     
 }
 

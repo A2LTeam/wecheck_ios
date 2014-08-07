@@ -7,11 +7,16 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "WCCoreDataHelper.h"
+#import "WCDataAccessSvc.h"
+//removing core data
+//#import "WCCoreDataHelper.h"
 
 @interface WCAppDelegate : UIResponder <UIApplicationDelegate>
 
 @property (strong, nonatomic) UIWindow *window;
-@property (nonatomic, strong, readonly) WCCoreDataHelper *coreDataHelper;
+
+@property (nonatomic, strong, readonly) WCDataAccessSvc *dataAccessSvc;
+//removing core data
+//@property (nonatomic, strong, readonly) WCCoreDataHelper *coreDataHelper;
 
 @end
