@@ -8,10 +8,15 @@
 
 #import <Foundation/Foundation.h>
 #import <sqlite3.h>
+#import "WCEntityCategory.h"
 
 @interface WCDataAccessSvc : NSObject
 
 @property (nonatomic) sqlite3 *itemDB;
 
 - (BOOL)isDatabaseExist;
+- (void)openDatabase;
+- (void)closeDatabase;
+- (NSArray*)getCategories;
+
 @end

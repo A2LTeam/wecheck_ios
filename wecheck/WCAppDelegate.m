@@ -16,10 +16,17 @@
     
     //removing core data
     //[[self cdh] saveContext];
-    [[self das] isDatabaseExist];
-    return YES;
+    if([[self das] isDatabaseExist])
+    {
+        [[self das] openDatabase];
+        return YES;
+    }
+    else
+    {
+        return NO;
+    }
 }
-							
+				
 - (void)applicationWillResignActive:(UIApplication *)application
 {
     // Sent when the application is about to move from active to inactive state. This can occur for certain types of temporary interruptions (such as an incoming phone call or SMS message) or when the user quits the application and it begins the transition to the background state.
@@ -51,6 +58,8 @@
     
     //removing core data
     //[[self cdh] saveContext];
+    
+    [[self das] closeDatabase];
 }
 
 #define debug 1

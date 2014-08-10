@@ -27,6 +27,10 @@
 		2466DAA51993CB190005A302 /* database in Resources */ = {isa = PBXBuildFile; fileRef = 2466DAA31993CB190005A302 /* database */; };
 		2466DAA91993CFA90005A302 /* WCDataAccessSvc.m in Sources */ = {isa = PBXBuildFile; fileRef = 2466DAA81993CFA90005A302 /* WCDataAccessSvc.m */; };
 		2466DAAA1993CFA90005A302 /* WCDataAccessSvc.m in Sources */ = {isa = PBXBuildFile; fileRef = 2466DAA81993CFA90005A302 /* WCDataAccessSvc.m */; };
+		2466DABA19977D000005A302 /* WCEntityCategory.m in Sources */ = {isa = PBXBuildFile; fileRef = 2466DAB919977D000005A302 /* WCEntityCategory.m */; };
+		2466DABB19977D000005A302 /* WCEntityCategory.m in Sources */ = {isa = PBXBuildFile; fileRef = 2466DAB919977D000005A302 /* WCEntityCategory.m */; };
+		2466DABE1997AD110005A302 /* WCSearchItemTableView.m in Sources */ = {isa = PBXBuildFile; fileRef = 2466DABD1997AD110005A302 /* WCSearchItemTableView.m */; };
+		2466DABF1997AD110005A302 /* WCSearchItemTableView.m in Sources */ = {isa = PBXBuildFile; fileRef = 2466DABD1997AD110005A302 /* WCSearchItemTableView.m */; };
 		2467FE1819684E1B0023EB05 /* WCSubCategory.m in Sources */ = {isa = PBXBuildFile; fileRef = 2467FE1719684E1B0023EB05 /* WCSubCategory.m */; };
 		2467FE1919684E1B0023EB05 /* WCSubCategory.m in Sources */ = {isa = PBXBuildFile; fileRef = 2467FE1719684E1B0023EB05 /* WCSubCategory.m */; };
 		2467FE1C19684FC40023EB05 /* WCItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 2467FE1B19684FC40023EB05 /* WCItem.m */; };
@@ -50,7 +54,7 @@
 		3969D43119544A3A0088F8F2 /* WCAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 3969D43019544A3A0088F8F2 /* WCAppDelegate.m */; };
 		3969D43419544A3A0088F8F2 /* Main_iPhone.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3969D43219544A3A0088F8F2 /* Main_iPhone.storyboard */; };
 		3969D43719544A3A0088F8F2 /* Main_iPad.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3969D43519544A3A0088F8F2 /* Main_iPad.storyboard */; };
-		3969D43A19544A3A0088F8F2 /* WCViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3969D43919544A3A0088F8F2 /* WCViewController.m */; };
+		3969D43A19544A3A0088F8F2 /* WCSearchViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3969D43919544A3A0088F8F2 /* WCSearchViewController.m */; };
 		3969D43C19544A3A0088F8F2 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3969D43B19544A3A0088F8F2 /* Images.xcassets */; };
 		3969D44319544A3A0088F8F2 /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3969D44219544A3A0088F8F2 /* XCTest.framework */; };
 		3969D44419544A3A0088F8F2 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3969D42019544A3A0088F8F2 /* Foundation.framework */; };
@@ -94,6 +98,10 @@
 		2466DAA31993CB190005A302 /* database */ = {isa = PBXFileReference; lastKnownFileType = folder; name = database; path = wecheck/database; sourceTree = "<group>"; };
 		2466DAA71993CFA90005A302 /* WCDataAccessSvc.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WCDataAccessSvc.h; sourceTree = "<group>"; };
 		2466DAA81993CFA90005A302 /* WCDataAccessSvc.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WCDataAccessSvc.m; sourceTree = "<group>"; };
+		2466DAB819977D000005A302 /* WCEntityCategory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = WCEntityCategory.h; path = wecheck/WCEntityClasses/WCEntityCategory.h; sourceTree = "<group>"; };
+		2466DAB919977D000005A302 /* WCEntityCategory.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = WCEntityCategory.m; path = wecheck/WCEntityClasses/WCEntityCategory.m; sourceTree = "<group>"; };
+		2466DABC1997AD110005A302 /* WCSearchItemTableView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WCSearchItemTableView.h; sourceTree = "<group>"; };
+		2466DABD1997AD110005A302 /* WCSearchItemTableView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WCSearchItemTableView.m; sourceTree = "<group>"; };
 		2467FE1619684E1B0023EB05 /* WCSubCategory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = WCSubCategory.h; path = wecheck/WCCoreDataClasses/WCSubCategory.h; sourceTree = "<group>"; };
 		2467FE1719684E1B0023EB05 /* WCSubCategory.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = WCSubCategory.m; path = wecheck/WCCoreDataClasses/WCSubCategory.m; sourceTree = "<group>"; };
 		2467FE1A19684FC40023EB05 /* WCItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = WCItem.h; path = wecheck/WCCoreDataClasses/WCItem.h; sourceTree = "<group>"; };
@@ -122,8 +130,8 @@
 		3969D43019544A3A0088F8F2 /* WCAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WCAppDelegate.m; sourceTree = "<group>"; };
 		3969D43319544A3A0088F8F2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main_iPhone.storyboard; sourceTree = "<group>"; };
 		3969D43619544A3A0088F8F2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main_iPad.storyboard; sourceTree = "<group>"; };
-		3969D43819544A3A0088F8F2 /* WCViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WCViewController.h; sourceTree = "<group>"; };
-		3969D43919544A3A0088F8F2 /* WCViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WCViewController.m; sourceTree = "<group>"; };
+		3969D43819544A3A0088F8F2 /* WCSearchViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WCSearchViewController.h; sourceTree = "<group>"; };
+		3969D43919544A3A0088F8F2 /* WCSearchViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WCSearchViewController.m; sourceTree = "<group>"; };
 		3969D43B19544A3A0088F8F2 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		3969D44119544A3A0088F8F2 /* wecheckTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = wecheckTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		3969D44219544A3A0088F8F2 /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
@@ -194,6 +202,16 @@
 				2466DAA81993CFA90005A302 /* WCDataAccessSvc.m */,
 			);
 			name = SqliteSvc;
+			sourceTree = "<group>";
+		};
+		2466DAB719977CB50005A302 /* WCEntityClasses */ = {
+			isa = PBXGroup;
+			children = (
+				2466DAB819977D000005A302 /* WCEntityCategory.h */,
+				2466DAB919977D000005A302 /* WCEntityCategory.m */,
+			);
+			name = WCEntityClasses;
+			path = ..;
 			sourceTree = "<group>";
 		};
 		24E4E64E195B0B4E00F7F476 /* WCCoreDataClasses */ = {
@@ -272,13 +290,16 @@
 				245FAF861967CF140025B73F /* WCHistoryItemTableViewController.m */,
 				245FAF8D1967D7CB0025B73F /* WCHistoryItemTableView.h */,
 				245FAF8E1967D7CB0025B73F /* WCHistoryItemTableView.m */,
+				2466DABC1997AD110005A302 /* WCSearchItemTableView.h */,
+				2466DABD1997AD110005A302 /* WCSearchItemTableView.m */,
 				3969D43219544A3A0088F8F2 /* Main_iPhone.storyboard */,
 				39EA637F195AF3B900A0C4A0 /* WCShopHotItemViewController.h */,
 				39EA6380195AF3B900A0C4A0 /* WCShopHotItemViewController.m */,
 				3969D43519544A3A0088F8F2 /* Main_iPad.storyboard */,
-				3969D43819544A3A0088F8F2 /* WCViewController.h */,
-				3969D43919544A3A0088F8F2 /* WCViewController.m */,
+				3969D43819544A3A0088F8F2 /* WCSearchViewController.h */,
+				3969D43919544A3A0088F8F2 /* WCSearchViewController.m */,
 				3969D43B19544A3A0088F8F2 /* Images.xcassets */,
+				2466DAB719977CB50005A302 /* WCEntityClasses */,
 				245FAF9E1968026A0025B73F /* CHCSVParser */,
 				24E4E64E195B0B4E00F7F476 /* WCCoreDataClasses */,
 				39EE1130195FCFDC00320C0D /* Icons */,
@@ -470,7 +491,7 @@
 				39F02F54196901D900E97A6E /* WCItemTableCell.m in Sources */,
 				24E4E643195883B400F7F476 /* WCFavoriteViewController.m in Sources */,
 				2467FE2819684FC50023EB05 /* WCShop.m in Sources */,
-				3969D43A19544A3A0088F8F2 /* WCViewController.m in Sources */,
+				3969D43A19544A3A0088F8F2 /* WCSearchViewController.m in Sources */,
 				245FAF971967FE3F0025B73F /* WCQueryHotItemSvc.m in Sources */,
 				2467FE1819684E1B0023EB05 /* WCSubCategory.m in Sources */,
 				2467FE2419684FC40023EB05 /* WCShopItem.m in Sources */,
@@ -484,8 +505,10 @@
 				245FAF9A1967FE500025B73F /* WCQueryShopParam.m in Sources */,
 				245FAF811967CDD10025B73F /* WC.DataModel.xcdatamodeld in Sources */,
 				3969D43119544A3A0088F8F2 /* WCAppDelegate.m in Sources */,
+				2466DABA19977D000005A302 /* WCEntityCategory.m in Sources */,
 				3969D42D19544A3A0088F8F2 /* main.m in Sources */,
 				245FAF981967FE4B0025B73F /* WCQueryShopSvc.m in Sources */,
+				2466DABE1997AD110005A302 /* WCSearchItemTableView.m in Sources */,
 				2466DAA91993CFA90005A302 /* WCDataAccessSvc.m in Sources */,
 				39FEB0D61962687F004A02A0 /* WCQueryHotItemParam.m in Sources */,
 				2467FE2C19684FC50023EB05 /* WCUserHistory.m in Sources */,
@@ -502,6 +525,8 @@
 				245FAF821967CDD10025B73F /* WC.DataModel.xcdatamodeld in Sources */,
 				2466DAAA1993CFA90005A302 /* WCDataAccessSvc.m in Sources */,
 				245FAF9D1967FE970025B73F /* WCHotItemViewController.m in Sources */,
+				2466DABF1997AD110005A302 /* WCSearchItemTableView.m in Sources */,
+				2466DABB19977D000005A302 /* WCEntityCategory.m in Sources */,
 				2467FE1D19684FC40023EB05 /* WCItem.m in Sources */,
 				2467FE2519684FC40023EB05 /* WCShopItem.m in Sources */,
 				3969D44F19544A3A0088F8F2 /* wecheckTests.m in Sources */,
